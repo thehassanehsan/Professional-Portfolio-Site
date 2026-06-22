@@ -1,0 +1,1212 @@
+
+html_content = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Hassan Ehsan | Digital Marketing Expert & Creative Director</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-text">
+                <span>M</span><span>H</span><span>E</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">MHE</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active" data-text="Home"><span>Home</span></a></li>
+                <li><a href="#about" class="nav-link" data-text="About Me"><span>About Me</span></a></li>
+                <li><a href="#services" class="nav-link" data-text="Services"><span>Services</span></a></li>
+                <li><a href="#experience" class="nav-link" data-text="Experience"><span>Experience</span></a></li>
+                <li><a href="#portfolio" class="nav-link" data-text="Work"><span>Work</span></a></li>
+                <li><a href="#skills" class="nav-link" data-text="Skills"><span>Skills</span></a></li>
+                <li><a href="#certifications" class="nav-link" data-text="Certs"><span>Certifications</span></a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact"><span>Contact</span></a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="mailto:thehassanehsan@gmail.com" class="btn btn-small btn-primary">Let's Talk</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-bg"></div>
+        <div class="mobile-menu-content">
+            <ul class="mobile-nav-links">
+                <li><a href="#home" class="mobile-nav-link"><span class="num">01</span> Home</a></li>
+                <li><a href="#about" class="mobile-nav-link"><span class="num">02</span> About Me</a></li>
+                <li><a href="#services" class="mobile-nav-link"><span class="num">03</span> Services</a></li>
+                <li><a href="#experience" class="mobile-nav-link"><span class="num">04</span> Experience</a></li>
+                <li><a href="#portfolio" class="mobile-nav-link"><span class="num">05</span> Work</a></li>
+                <li><a href="#skills" class="mobile-nav-link"><span class="num">06</span> Skills</a></li>
+                <li><a href="#certifications" class="mobile-nav-link"><span class="num">07</span> Certifications</a></li>
+                <li><a href="#contact" class="mobile-nav-link"><span class="num">08</span> Contact</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <a href="mailto:thehassanehsan@gmail.com" class="mobile-email">thehassanehsan@gmail.com</a>
+                <a href="tel:+923214211029" class="mobile-phone">+92 321 421 1029</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-bg-shape shape-1"></div>
+            <div class="hero-bg-shape shape-2"></div>
+            <div class="hero-bg-shape shape-3"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting">
+                    <span class="greeting-line"></span>
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Muhammad</span>
+                    <span class="title-line">Hassan <span class="title-accent">Ehsan</span></span>
+                </h1>
+                <div class="hero-role">
+                    <span class="role-text" id="typewriter"></span>
+                    <span class="role-cursor">|</span>
+                </div>
+                <p class="hero-desc">Co-Founder & Regional Director at <strong>Filmelo Media</strong>. I architect digital marketing strategies, lead creative production, and drive brand growth across <strong>Pakistan</strong> and the <strong>United States</strong>. Transforming South Asian hospitality brands into digital powerhouses.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Brands Managed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-count="2">0</span>
+                        <span class="stat-label">Countries Active</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Google Certs</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <span>Start a Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#portfolio" class="btn btn-outline btn-lg">
+                        <span>View My Work</span>
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image">
+                        <div class="hero-image-inner">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="hero-image-ring ring-1"></div>
+                    <div class="hero-image-ring ring-2"></div>
+                    <div class="hero-image-ring ring-3"></div>
+                    <div class="floating-badge badge-1">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Google Certified</span>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <i class="fas fa-star"></i>
+                        <span>Top Rated</span>
+                    </div>
+                    <div class="floating-badge badge-3">
+                        <i class="fas fa-globe"></i>
+                        <span>Global Reach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span class="scroll-text">Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="section-bg-text">ABOUT</div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get To Know Me</span>
+                <h2 class="section-title">About <span class="text-accent">Me</span></h2>
+                <p class="section-subtitle">Computer Science student turned digital marketing strategist and creative entrepreneur</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-image-card">
+                        <div class="about-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="about-image-frame"></div>
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="exp-years">3+</span>
+                        <span class="exp-text">Years of<br>Experience</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-lead">I'm a <strong>BSCS student at Bahria University</strong> (CGPA 3.5/4.0, Expected 2029) with a passion for bridging technology and creative marketing. Currently serving as <strong>Co-Founder & Regional Director</strong> of Filmelo Media, a full-service creative agency I built from the ground up.</p>
+                        <p>My journey spans two continents — managing <strong>10+ brands</strong> across Pakistan and the United States, with a specialized focus on <strong>South Asian restaurant and hospitality brands</strong> in the New Jersey/Philadelphia region. I don't just run campaigns; I build brand ecosystems.</p>
+                        <p>From orchestrating end-to-end content production for <strong>Khanbaba Restaurant</strong> and <strong>Faletti's Hotel</strong> to scaling paid advertising for <strong>Burns Road Kitchen</strong> and <strong>Shalamar</strong> in the U.S., every project is a blend of strategic thinking, creative excellence, and data-driven optimization.</p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-icon"><i class="fas fa-rocket"></i></div>
+                            <h4>Agency Leadership</h4>
+                            <p>Co-founded Filmelo Media, overseeing operations, business development, client acquisition, HR, and finances across two countries.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon"><i class="fas fa-trophy"></i></div>
+                            <h4>National Debater</h4>
+                            <p>Represented Bahria University in the International HEC All-Pakistan Universities Debate — honed strategic thinking under pressure.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon"><i class="fas fa-certificate"></i></div>
+                            <h4>Google Certified</h4>
+                            <p>Holding 5+ professional certificates from Google in Project Management, Digital Marketing, AI Essentials, and Prompting.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>Data-Driven</h4>
+                            <p>Expert in A/B testing, performance analytics, ROAS optimization, and AI-powered workflow automation for maximum efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Work With Me</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="btn btn-text">
+                            <span>Download Resume</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="section-bg-text">SERVICES</div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Offer</span>
+                <h2 class="section-title">My <span class="text-accent">Services</span></h2>
+                <p class="section-subtitle">Comprehensive digital solutions tailored for brands ready to scale</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-tilt>
+                    <div class="service-number">01</div>
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                    </div>
+                    <h3>Digital Marketing Strategy</h3>
+                    <p>End-to-end campaign architecture across Google Ads, Meta Ads, social media, SEO/SEM, and email marketing. Continuous A/B testing and performance analytics to maximize ROAS and engagement.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Google & Meta Ads Management</li>
+                        <li><i class="fas fa-check"></i> SEO/SEM Strategy & Execution</li>
+                        <li><i class="fas fa-check"></i> Email Marketing Automation</li>
+                        <li><i class="fas fa-check"></i> Performance Analytics & Reporting</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card featured" data-tilt>
+                    <div class="service-number">02</div>
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    </div>
+                    <h3>Creative Content Production</h3>
+                    <p>Full-service content creation from concept to delivery — graphic design, video direction, shooting, editing, motion graphics, and visual storytelling with consistent brand identity.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Brand Identity & Visual Design</li>
+                        <li><i class="fas fa-check"></i> Video Production & Editing</li>
+                        <li><i class="fas fa-check"></i> Motion Graphics & Animation</li>
+                        <li><i class="fas fa-check"></i> Multi-Platform Publishing</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-number">03</div>
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    </div>
+                    <h3>Brand Growth & Positioning</h3>
+                    <p>Strategic brand positioning and growth hacking for South Asian hospitality brands. Community engagement, cross-platform publishing, and sustainable business scaling.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Brand Strategy & Positioning</li>
+                        <li><i class="fas fa-check"></i> Community Management</li>
+                        <li><i class="fas fa-check"></i> E-commerce Growth Initiatives</li>
+                        <li><i class="fas fa-check"></i> Product Launch Campaigns</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-number">04</div>
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+                    </div>
+                    <h3>Project & Operations Management</h3>
+                    <p>Agile project delivery from initiation through completion. Risk management, quality assurance, resource allocation, and stakeholder communication using data-driven methodologies.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Agile & Sprint Methodologies</li>
+                        <li><i class="fas fa-check"></i> Risk Management Frameworks</li>
+                        <li><i class="fas fa-check"></i> Quality Assurance Protocols</li>
+                        <li><i class="fas fa-check"></i> AI-Powered Workflow Automation</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-number">05</div>
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    </div>
+                    <h3>AI & Automation Solutions</h3>
+                    <p>Leveraging cutting-edge AI tools for content generation, workflow automation, and productivity enhancement. Prompt engineering and LLM applications for modern marketing.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Prompt Engineering & LLM Apps</li>
+                        <li><i class="fas fa-check"></i> Workflow Automation</li>
+                        <li><i class="fas fa-check"></i> AI-Powered Content Strategies</li>
+                        <li><i class="fas fa-check"></i> Multimodal AI Integration</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-number">06</div>
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-users"></i></div>
+                    </div>
+                    <h3>Business Development</h3>
+                    <p>Client acquisition, stakeholder communication, and business correspondence. Public speaking expertise and strategic partnership building for agency growth.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Client Acquisition Strategy</li>
+                        <li><i class="fas fa-check"></i> Stakeholder Communication</li>
+                        <li><i class="fas fa-check"></i> Public Speaking & Presentations</li>
+                        <li><i class="fas fa-check"></i> Strategic Partnership Building</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+        <div class="section-bg-text">EXPERIENCE</div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Professional <span class="text-accent">Experience</span></h2>
+                <p class="section-subtitle">From founding an agency to managing multi-national brand portfolios</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-line">
+                    <div class="timeline-progress" id="timeline-progress"></div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <div class="company-logo"><i class="fas fa-film"></i></div>
+                                <div class="company-info">
+                                    <h3>Filmelo Media</h3>
+                                    <span class="company-location"><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan & USA</span>
+                                </div>
+                            </div>
+                            <span class="timeline-date">2024 — Present</span>
+                        </div>
+                        <h4 class="timeline-role">Co-Founder & Regional Director — Pakistan</h4>
+                        <p class="timeline-desc">Co-founded a full-service creative and digital marketing agency operating across Pakistan and the United States. Oversee all regional operations, business development, client acquisition, HR, finances, and quality assurance.</p>
+                        <div class="timeline-clients">
+                            <span class="clients-label">Key Clients:</span>
+                            <div class="client-tags">
+                                <span class="client-tag">Khanbaba Restaurant</span>
+                                <span class="client-tag">Faletti's Hotel</span>
+                                <span class="client-tag">Tandoori Tea & Co.</span>
+                                <span class="client-tag">Burns Road Kitchen</span>
+                                <span class="client-tag">Shalamar</span>
+                                <span class="client-tag">Kandahar</span>
+                                <span class="client-tag">Burns Road Foods</span>
+                                <span class="client-tag">Tabak NJ</span>
+                            </div>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="tag">Agency Leadership</span>
+                            <span class="tag">Operations</span>
+                            <span class="tag">Client Relations</span>
+                            <span class="tag">Growth Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <div class="company-logo"><i class="fas fa-bee"></i></div>
+                                <div class="company-info">
+                                    <h3>Beescreations.pk</h3>
+                                    <span class="company-location"><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</span>
+                                </div>
+                            </div>
+                            <span class="timeline-date">Sept 2023 — Present</span>
+                        </div>
+                        <h4 class="timeline-role">Digital Marketing Manager</h4>
+                        <p class="timeline-desc">Architect and execute comprehensive digital marketing strategies spanning Google Ads, Meta Ads, social media, SEO/SEM, and email marketing. Design and manage multi-channel advertising campaigns with continuous optimization.</p>
+                        <div class="timeline-achievements">
+                            <div class="achievement"><i class="fas fa-chart-line"></i> Campaign optimization for ROAS</div>
+                            <div class="achievement"><i class="fas fa-envelope"></i> Email automation workflows</div>
+                            <div class="achievement"><i class="fas fa-search"></i> SEO strategy & organic growth</div>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="tag">Google Ads</span>
+                            <span class="tag">Meta Ads</span>
+                            <span class="tag">SEO/SEM</span>
+                            <span class="tag">Email Marketing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <div class="company-logo"><i class="fas fa-lightbulb"></i></div>
+                                <div class="company-info">
+                                    <h3>Ideoversity</h3>
+                                    <span class="company-location"><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</span>
+                                </div>
+                            </div>
+                            <span class="timeline-date">Aug 2023 — Present</span>
+                        </div>
+                        <h4 class="timeline-role">Project Manager</h4>
+                        <p class="timeline-desc">Lead cross-functional projects from initiation through delivery using Agile methodologies and sprint retrospectives. Implement risk management frameworks and quality assurance protocols to optimize outcomes.</p>
+                        <div class="timeline-achievements">
+                            <div class="achievement"><i class="fas fa-tasks"></i> Agile sprint management</div>
+                            <div class="achievement"><i class="fas fa-shield-alt"></i> Risk management frameworks</div>
+                            <div class="achievement"><i class="fas fa-robot"></i> AI-powered productivity tools</div>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="tag">Agile</span>
+                            <span class="tag">Project Delivery</span>
+                            <span class="tag">QA</span>
+                            <span class="tag">AI Tools</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="portfolio">
+        <div class="section-bg-text">PORTFOLIO</div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Selected Works</span>
+                <h2 class="section-title">My <span class="text-accent">Portfolio</span></h2>
+                <p class="section-subtitle">Campaigns, brands, and creative projects I've delivered across two continents</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="pakistan">Pakistan</button>
+                <button class="filter-btn" data-filter="usa">United States</button>
+                <button class="filter-btn" data-filter="creative">Creative</button>
+            </div>
+            <div class="portfolio-grid" id="portfolio-grid">
+                <div class="portfolio-item" data-category="pakistan creative">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <i class="fas fa-utensils"></i>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Pakistan • Food & Hospitality</span>
+                            <h3>Khanbaba Restaurant</h3>
+                            <p>End-to-end content creation covering regular dining, catering services, and brand events — content planning, brand positioning, production direction, shooting, editing, and final delivery.</p>
+                            <div class="portfolio-tags">
+                                <span>Content Strategy</span>
+                                <span>Brand Positioning</span>
+                                <span>Video Production</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="pakistan creative">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <i class="fas fa-hotel"></i>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Pakistan • Luxury Hospitality</span>
+                            <h3>Faletti's Hotel</h3>
+                            <p>Full creative services for the main hotel and café concepts (Café de Brando & Café Beirut) — social content, catering coverage, brand positioning, and cross-platform publishing.</p>
+                            <div class="portfolio-tags">
+                                <span>Social Media</span>
+                                <span>Brand Identity</span>
+                                <span>Cross-Platform</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="pakistan creative">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <i class="fas fa-mug-hot"></i>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Pakistan • Café Brand</span>
+                            <h3>Tandoori Tea & Co.</h3>
+                            <p>Content strategy, brand identity, social media management, and production services for this trending café brand — building a distinctive visual presence from scratch.</p>
+                            <div class="portfolio-tags">
+                                <span>Brand Identity</span>
+                                <span>Content Strategy</span>
+                                <span>Social Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="usa">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <i class="fas fa-globe-americas"></i>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">USA • South Asian Restaurant</span>
+                            <h3>Burns Road Kitchen</h3>
+                            <p>Full social media management and paid advertising for this NJ-based Pakistani restaurant — Meta Ads, Google Ads, content creation, and community engagement.</p>
+                            <div class="portfolio-tags">
+                                <span>Meta Ads</span>
+                                <span>Google Ads</span>
+                                <span>Social Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="usa">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <i class="fas fa-pepper-hot"></i>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">USA • Pakistani Cuisine</span>
+                            <h3>Shalamar</h3>
+                            <p>Brand content, social strategy, and ad campaigns — building a strong digital presence for this Philadelphia-area Pakistani restaurant brand.</p>
+                            <div class="portfolio-tags">
+                                <span>Brand Content</span>
+                                <span>Ad Campaigns</span>
+                                <span>Social Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="usa">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <i class="fas fa-fire"></i>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">USA • Afghan/Pakistani Cuisine</span>
+                            <h3>Kandahar</h3>
+                            <p>Content creation, brand positioning, and community engagement — crafting a compelling brand narrative for this U.S. restaurant specializing in Afghan and Pakistani flavors.</p>
+                            <div class="portfolio-tags">
+                                <span>Content Creation</span>
+                                <span>Brand Positioning</span>
+                                <span>Community Engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="section-bg-text">SKILLS</div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Expertise</span>
+                <h2 class="section-title">Skills & <span class="text-accent">Competencies</span></h2>
+                <p class="section-subtitle">A diverse toolkit built across marketing, creative, tech, and leadership</p>
+            </div>
+            <div class="skills-layout">
+                <div class="skills-categories">
+                    <button class="skill-cat-btn active" data-cat="marketing">
+                        <i class="fas fa-ad"></i>
+                        <span>Digital Marketing</span>
+                    </button>
+                    <button class="skill-cat-btn" data-cat="creative">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Creative Production</span>
+                    </button>
+                    <button class="skill-cat-btn" data-cat="management">
+                        <i class="fas fa-tasks"></i>
+                        <span>Project Management</span>
+                    </button>
+                    <button class="skill-cat-btn" data-cat="ai">
+                        <i class="fas fa-brain"></i>
+                        <span>AI & Technology</span>
+                    </button>
+                    <button class="skill-cat-btn" data-cat="leadership">
+                        <i class="fas fa-users"></i>
+                        <span>Leadership</span>
+                    </button>
+                </div>
+                <div class="skills-display" id="skills-display">
+                    <div class="skill-group active" data-cat="marketing">
+                        <div class="skill-group-header">
+                            <h3>Digital Marketing</h3>
+                            <p>Comprehensive expertise across paid, organic, and email channels with data-driven optimization</p>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Google Ads</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Meta Ads (Facebook/Instagram)</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>SEO / SEM</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Email Marketing & Automation</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Content Strategy</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Performance Analytics & A/B Testing</span>
+                                    <span class="skill-percent">87%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="87"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group" data-cat="creative">
+                        <div class="skill-group-header">
+                            <h3>Creative Production</h3>
+                            <p>End-to-end creative capabilities from concept to final delivery across all platforms</p>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Graphic Design</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Video Direction & Production</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Video Editing</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Motion Graphics</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Brand Identity</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Visual Storytelling</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group" data-cat="management">
+                        <div class="skill-group-header">
+                            <h3>Project & Operations Management</h3>
+                            <p>Agile delivery, risk management, and operational excellence at scale</p>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Agile / Sprint Methodology</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Risk Management</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Quality Assurance</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Resource Allocation</span>
+                                    <span class="skill-percent">87%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="87"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Financial Oversight</span>
+                                    <span class="skill-percent">82%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>HR & Team Management</span>
+                                    <span class="skill-percent">86%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="86"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group" data-cat="ai">
+                        <div class="skill-group-header">
+                            <h3>AI & Technology</h3>
+                            <p>Leveraging cutting-edge AI tools and modern tech stacks for marketing innovation</p>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Prompt Engineering</span>
+                                    <span class="skill-percent">93%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>LLM Applications</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Workflow Automation</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Google Workspace</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Microsoft Office Suite</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Social Media Management Tools</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group" data-cat="leadership">
+                        <div class="skill-group-header">
+                            <h3>Leadership & Communication</h3>
+                            <p>Building teams, winning clients, and communicating vision with clarity</p>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Public Speaking</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Team Leadership</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Client Acquisition</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Business Development</span>
+                                    <span class="skill-percent">87%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="87"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Stakeholder Communication</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-info">
+                                    <span>Complex Problem-Solving</span>
+                                    <span class="skill-percent">89%</span>
+                                </div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="89"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3 class="tools-title">Tools & Technologies I Use</h3>
+                <div class="tools-grid">
+                    <div class="tool-item"><i class="fab fa-google"></i><span>Google Ads</span></div>
+                    <div class="tool-item"><i class="fab fa-meta"></i><span>Meta Ads</span></div>
+                    <div class="tool-item"><i class="fab fa-google"></i><span>Analytics</span></div>
+                    <div class="tool-item"><i class="fas fa-envelope"></i><span>Mailchimp</span></div>
+                    <div class="tool-item"><i class="fab fa-figma"></i><span>Figma</span></div>
+                    <div class="tool-item"><i class="fas fa-pen-nib"></i><span>Adobe CC</span></div>
+                    <div class="tool-item"><i class="fas fa-video"></i><span>Premiere Pro</span></div>
+                    <div class="tool-item"><i class="fas fa-cube"></i><span>After Effects</span></div>
+                    <div class="tool-item"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
+                    <div class="tool-item"><i class="fas fa-robot"></i><span>ChatGPT</span></div>
+                    <div class="tool-item"><i class="fas fa-brain"></i><span>Claude</span></div>
+                    <div class="tool-item"><i class="fas fa-chart-pie"></i><span>Data Studio</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications section" id="certifications">
+        <div class="section-bg-text">CERTS</div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Continuous Learning</span>
+                <h2 class="section-title">Certifications & <span class="text-accent">Development</span></h2>
+                <p class="section-subtitle">Always leveling up — from Google to IBM to AWS</p>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card completed">
+                    <div class="cert-status"><i class="fas fa-check-circle"></i> Completed</div>
+                    <div class="cert-icon"><i class="fab fa-google"></i></div>
+                    <h3>Google Project Management Professional</h3>
+                    <p>Professional certificate covering project lifecycle, Agile methodologies, and stakeholder management.</p>
+                    <div class="cert-meta">
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                        <span><i class="fas fa-award"></i> Google</span>
+                    </div>
+                </div>
+                <div class="cert-card completed">
+                    <div class="cert-status"><i class="fas fa-check-circle"></i> Completed</div>
+                    <div class="cert-icon"><i class="fab fa-google"></i></div>
+                    <h3>Google Digital Marketing & E-commerce</h3>
+                    <p>Comprehensive training in digital marketing channels, e-commerce strategies, and campaign optimization.</p>
+                    <div class="cert-meta">
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                        <span><i class="fas fa-award"></i> Google</span>
+                    </div>
+                </div>
+                <div class="cert-card completed">
+                    <div class="cert-status"><i class="fas fa-check-circle"></i> Completed</div>
+                    <div class="cert-icon"><i class="fab fa-google"></i></div>
+                    <h3>Google AI Essentials</h3>
+                    <p>Foundation in AI concepts, responsible AI practices, and practical AI applications in business.</p>
+                    <div class="cert-meta">
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                        <span><i class="fas fa-award"></i> Google</span>
+                    </div>
+                </div>
+                <div class="cert-card completed">
+                    <div class="cert-status"><i class="fas fa-check-circle"></i> Completed</div>
+                    <div class="cert-icon"><i class="fab fa-google"></i></div>
+                    <h3>Google Prompting Essentials</h3>
+                    <p>Advanced prompt engineering techniques for maximizing LLM output quality and efficiency.</p>
+                    <div class="cert-meta">
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                        <span><i class="fas fa-award"></i> Google</span>
+                    </div>
+                </div>
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-code"></i></div>
+                    <h3>IBM Full Stack Software Engineer</h3>
+                    <p>Professional certificate covering front-end, back-end, cloud, and DevOps fundamentals.</p>
+                    <div class="cert-meta">
+                        <span><i class="fas fa-calendar"></i> 2026</span>
+                        <span><i class="fas fa-award"></i> IBM</span>
+                    </div>
+                    <div class="cert-progress-bar">
+                        <div class="cert-progress-fill" style="width: 35%"></div>
+                    </div>
+                </div>
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>IBM & ISC² Cybersecurity Specialist</h3>
+                    <p>Specialized certification in cybersecurity principles, threat management, and risk assessment.</p>
+                    <div class="cert-meta">
+                        <span><i class="fas fa-calendar"></i> 2026</span>
+                        <span><i class="fas fa-award"></i> IBM & ISC²</span>
+                    </div>
+                    <div class="cert-progress-bar">
+                        <div class="cert-progress-fill" style="width: 20%"></div>
+                    </div>
+                </div>
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+                    <h3>Microsoft Azure Cloud Architect</h3>
+                    <p>Enterprise cloud architecture, Azure services, and infrastructure design certification.</p>
+                    <div class="cert-meta">
+                        <span><i class="fas fa-calendar"></i> 2026</span>
+                        <span><i class="fas fa-award"></i> Microsoft</span>
+                    </div>
+                    <div class="cert-progress-bar">
+                        <div class="cert-progress-fill" style="width: 15%"></div>
+                    </div>
+                </div>
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fab fa-meta"></i></div>
+                    <h3>Meta Professional Advertising</h3>
+                    <p>Advanced Meta advertising certification for campaign strategy, optimization, and measurement.</p>
+                    <div class="cert-meta">
+                        <span><i class="fas fa-calendar"></i> 2026</span>
+                        <span><i class="fas fa-award"></i> Meta</span>
+                    </div>
+                    <div class="cert-progress-bar">
+                        <div class="cert-progress-fill" style="width: 40%"></div>
+                    </div>
+                </div>
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                    <h3>AWS Cloud Certification</h3>
+                    <p>Amazon Web Services cloud practitioner and solutions architect certification path.</p>
+                    <div class="cert-meta">
+                        <span><i class="fas fa-calendar"></i> 2026</span>
+                        <span><i class="fas fa-award"></i> Amazon</span>
+                    </div>
+                    <div class="cert-progress-bar">
+                        <div class="cert-progress-fill" style="width: 10%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Client Feedback</span>
+                <h2 class="section-title">What Clients <span class="text-accent">Say</span></h2>
+            </div>
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Hassan transformed our entire digital presence. From content strategy to paid ads, the ROI we've seen since working with Filmelo Media has been incredible. Truly a strategic partner."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div class="author-info">
+                                <h4>Khanbaba Restaurant</h4>
+                                <span>Lahore, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Managing our social media and ads across two café concepts was no small task. Hassan delivered consistent, high-quality content that elevated our brand image significantly."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div class="author-info">
+                                <h4>Faletti's Hotel</h4>
+                                <span>Lahore, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"As a Pakistani restaurant in New Jersey, we needed someone who understood our culture AND digital marketing. Hassan nailed both. Our customer engagement has tripled."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div class="author-info">
+                                <h4>Burns Road Kitchen</h4>
+                                <span>New Jersey, USA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The brand identity and content strategy Hassan developed for Tandoori Tea helped us stand out in a crowded café market. Professional, creative, and always on time."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div class="author-info">
+                                <h4>Tandoori Tea & Co.</h4>
+                                <span>Lahore, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-btn prev" id="testimonial-prev"><i class="fas fa-arrow-left"></i></button>
+                    <div class="testimonial-dots" id="testimonial-dots"></div>
+                    <button class="testimonial-btn next" id="testimonial-next"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-bg">
+            <div class="cta-shape cta-shape-1"></div>
+            <div class="cta-shape cta-shape-2"></div>
+            <div class="cta-shape cta-shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Have a Project in Mind?</h2>
+                <p class="cta-subtitle">Let's build something great together. Whether you're a restaurant brand in Pakistan or a startup in the U.S., I'm ready to bring your vision to life.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:thehassanehsan@gmail.com" class="btn btn-primary btn-lg">
+                        <span>Start a Conversation</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                    <a href="tel:+923214211029" class="btn btn-outline btn-lg">
+                        <span>Call Me Directly</span>
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                <div class="cta-info">
+                    <div class="cta-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>thehassanehsan@gmail.com</span>
+                    </div>
+                    <div class="cta-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+92 321 421 1029</span>
+                    </div>
+                    <div class="cta-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Lahore, Punjab, Pakistan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#home" class="footer-logo">
+                            <span class="logo-text">MHE</span>
+                            <span class="logo-dot"></span>
+                        </a>
+                        <p class="footer-desc">Digital marketing expert and creative director building powerful brands across Pakistan and the United States. Specializing in South Asian hospitality and restaurant marketing.</p>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="footer-social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="footer-social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                            <a href="#" class="footer-social-link" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Digital Marketing</a></li>
+                            <li><a href="#services">Creative Production</a></li>
+                            <li><a href="#services">Brand Growth</a></li>
+                            <li><a href="#services">Project Management</a></li>
+                            <li><a href="#services">AI Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Contact</h4>
+                        <ul class="footer-contact-list">
+                            <li><a href="mailto:thehassanehsan@gmail.com"><i class="fas fa-envelope"></i> thehassanehsan@gmail.com</a></li>
+                            <li><a href="tel:+923214211029"><i class="fas fa-phone"></i> +92 321 421 1029</a></li>
+                            <li><span><i class="fas fa-map-marker-alt"></i> Lahore, Punjab, Pakistan</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© 2026 Muhammad Hassan Ehsan. All Rights Reserved.</p>
+                    <p class="footer-credit">Designed with <i class="fas fa-heart"></i> by Hassan Ehsan</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>'''
+
+with open('/mnt/agents/output/portfolio.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("HTML file created successfully!")
