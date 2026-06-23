@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Hassan Ehsan | Digital Marketing Expert & Creative Director</title>
+    <title>Muhammad Hassan Ehsan | Digital Marketing Specialist</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -33,9 +33,10 @@
     --shadow-md: 0 8px 32px rgba(0,0,0,0.4);
     --shadow-lg: 0 20px 60px rgba(0,0,0,0.5);
     --shadow-accent: 0 8px 32px rgba(233, 69, 96, 0.2);
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    /* SPEEDS INCREASED BY ~25% */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.22s ease;
+    --transition-slow: 0.37s ease;
     --font-primary: 'Inter', sans-serif;
     --font-display: 'Playfair Display', serif;
 }
@@ -52,9 +53,6 @@
     --bg-card-hover: #f0f0f5;
     --border: rgba(0,0,0,0.08);
     --border-light: rgba(0,0,0,0.12);
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-    --shadow-md: 0 8px 32px rgba(0,0,0,0.08);
-    --shadow-lg: 0 20px 60px rgba(0,0,0,0.1);
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -140,7 +138,7 @@ body.preload-active { overflow: hidden; }
     content: ''; position: absolute; top: 0; left: -100%;
     width: 100%; height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s ease;
+    transition: left 0.35s ease;
 }
 .btn-primary:hover::before { left: 100%; }
 
@@ -156,22 +154,22 @@ body.preload-active { overflow: hidden; }
 .preloader {
     position: fixed; inset: 0; background: var(--bg); z-index: 9999;
     display: flex; align-items: center; justify-content: center;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 .preloader.hidden { opacity: 0; visibility: hidden; }
 .preloader-content { text-align: center; }
 .preloader-text { font-size: 4rem; font-weight: 900; margin-bottom: 30px; }
-.preloader-text span { display: inline-block; animation: preloaderBounce 0.6s ease infinite alternate; color: var(--accent); }
-.preloader-text span:nth-child(2) { animation-delay: 0.1s; }
-.preloader-text span:nth-child(3) { animation-delay: 0.2s; }
+.preloader-text span { display: inline-block; animation: preloaderBounce 0.45s ease infinite alternate; color: var(--accent); }
+.preloader-text span:nth-child(2) { animation-delay: 0.08s; }
+.preloader-text span:nth-child(3) { animation-delay: 0.15s; }
 @keyframes preloaderBounce { from { transform: translateY(0); } to { transform: translateY(-15px); } }
 
 .preloader-bar { width: 200px; height: 3px; background: var(--bg-card); border-radius: 3px; overflow: hidden; margin: 0 auto; }
-.preloader-progress { height: 100%; width: 0; background: var(--gradient-1); border-radius: 3px; animation: preloaderProgress 1.5s ease forwards; }
+.preloader-progress { height: 100%; width: 0; background: var(--gradient-1); border-radius: 3px; animation: preloaderProgress 1.1s ease forwards; }
 @keyframes preloaderProgress { 0% { width: 0; } 50% { width: 60%; } 100% { width: 100%; } }
 
 /* Custom Cursor */
-.cursor, .cursor-follower { position: fixed; pointer-events: none; z-index: 9998; border-radius: 50%; transition: transform 0.1s ease, opacity 0.2s ease; mix-blend-mode: difference; }
+.cursor, .cursor-follower { position: fixed; pointer-events: none; z-index: 9998; border-radius: 50%; transition: transform 0.08s ease, opacity 0.15s ease; mix-blend-mode: difference; }
 .cursor { width: 8px; height: 8px; background: var(--accent); }
 .cursor-follower { width: 40px; height: 40px; border: 1px solid var(--accent); opacity: 0.5; }
 @media (pointer: coarse) { .cursor, .cursor-follower { display: none; } }
@@ -184,7 +182,7 @@ body.preload-active { overflow: hidden; }
 .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
 .logo { display: flex; align-items: center; gap: 4px; text-decoration: none; }
 .logo-text { font-size: 1.5rem; font-weight: 900; color: var(--text); letter-spacing: 2px; }
-.logo-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; animation: logoPulse 2s ease infinite; }
+.logo-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; animation: logoPulse 1.5s ease infinite; }
 @keyframes logoPulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.7; } }
 
 .nav-links { display: flex; gap: 8px; list-style: none; }
@@ -209,7 +207,7 @@ body.preload-active { overflow: hidden; }
 .mobile-menu { position: fixed; inset: 0; z-index: 999; visibility: hidden; opacity: 0; transition: all var(--transition-normal); }
 .mobile-menu.active { visibility: visible; opacity: 1; }
 .mobile-menu-bg { position: absolute; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); }
-.mobile-menu-content { position: absolute; top: 0; right: 0; width: 100%; max-width: 400px; height: 100%; background: var(--bg); padding: 100px 40px 40px; transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); overflow-y: auto; }
+.mobile-menu-content { position: absolute; top: 0; right: 0; width: 100%; max-width: 400px; height: 100%; background: var(--bg); padding: 100px 40px 40px; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); overflow-y: auto; }
 .mobile-menu.active .mobile-menu-content { transform: translateX(0); }
 .mobile-nav-links { list-style: none; margin-bottom: 60px; }
 .mobile-nav-links li { border-bottom: 1px solid var(--border); }
@@ -219,13 +217,14 @@ body.preload-active { overflow: hidden; }
 .mobile-menu-footer { display: flex; flex-direction: column; gap: 12px; }
 .mobile-email, .mobile-phone { color: var(--text-light); text-decoration: none; font-size: 0.9rem; transition: color var(--transition-normal); }
 .mobile-email:hover, .mobile-phone:hover { color: var(--accent); }
+
 /* Hero Section */
 .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding: 140px 0 80px; overflow: hidden; }
 .hero-bg { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
-.hero-bg-shape { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.15; animation: floatShape 20s ease-in-out infinite; }
+.hero-bg-shape { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.15; animation: floatShape 15s ease-in-out infinite; }
 .shape-1 { width: 600px; height: 600px; background: var(--accent); top: -200px; right: -100px; animation-delay: 0s; }
-.shape-2 { width: 400px; height: 400px; background: #667eea; bottom: -100px; left: -100px; animation-delay: -7s; }
-.shape-3 { width: 300px; height: 300px; background: #f5576c; top: 50%; left: 30%; animation-delay: -14s; }
+.shape-2 { width: 400px; height: 400px; background: #667eea; bottom: -100px; left: -100px; animation-delay: -5s; }
+.shape-3 { width: 300px; height: 300px; background: #f5576c; top: 50%; left: 30%; animation-delay: -10s; }
 @keyframes floatShape { 0%, 100% { transform: translate(0, 0) scale(1); } 25% { transform: translate(50px, -50px) scale(1.1); } 50% { transform: translate(-30px, 30px) scale(0.95); } 75% { transform: translate(20px, 40px) scale(1.05); } }
 
 .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%); }
@@ -233,32 +232,32 @@ body.preload-active { overflow: hidden; }
 .hero-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 60px; position: relative; z-index: 1; width: 100%; }
 .hero-content { flex: 1; }
 
-.hero-greeting { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; opacity: 0; animation: fadeInUp 0.6s ease forwards 0.5s; }
+.hero-greeting { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; opacity: 0; animation: fadeInUp 0.45s ease forwards 0.3s; }
 .greeting-line { width: 40px; height: 2px; background: var(--accent); }
 .greeting-text { font-size: 0.9rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; }
 
 .hero-title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
-.title-line { display: block; opacity: 0; animation: fadeInUp 0.8s ease forwards; }
-.title-line:nth-child(1) { animation-delay: 0.7s; }
-.title-line:nth-child(2) { animation-delay: 0.9s; }
+.title-line { display: block; opacity: 0; animation: fadeInUp 0.6s ease forwards; }
+.title-line:nth-child(1) { animation-delay: 0.5s; }
+.title-line:nth-child(2) { animation-delay: 0.65s; }
 .title-accent { color: var(--accent); position: relative; }
 .title-accent::after { content: ''; position: absolute; bottom: 5px; left: 0; right: 0; height: 12px; background: var(--accent-glow); border-radius: 4px; z-index: -1; }
 
-.hero-role { display: flex; align-items: center; gap: 4px; margin-bottom: 24px; font-size: 1.3rem; color: var(--text-light); font-weight: 500; opacity: 0; animation: fadeInUp 0.6s ease forwards 1.1s; }
-.role-cursor { color: var(--accent); animation: blink 1s step-end infinite; }
+.hero-role { display: flex; align-items: center; gap: 4px; margin-bottom: 24px; font-size: 1.3rem; color: var(--text-light); font-weight: 500; opacity: 0; animation: fadeInUp 0.45s ease forwards 0.8s; }
+.role-cursor { color: var(--accent); animation: blink 0.75s step-end infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 
-.hero-desc { font-size: 1.05rem; color: var(--text-light); max-width: 520px; margin-bottom: 32px; line-height: 1.8; opacity: 0; animation: fadeInUp 0.6s ease forwards 1.3s; }
+.hero-desc { font-size: 1.05rem; color: var(--text-light); max-width: 520px; margin-bottom: 32px; line-height: 1.8; opacity: 0; animation: fadeInUp 0.45s ease forwards 0.95s; }
 .hero-desc strong { color: var(--text); }
 
-.hero-stats { display: flex; gap: 40px; margin-bottom: 40px; opacity: 0; animation: fadeInUp 0.6s ease forwards 1.5s; }
+.hero-stats { display: flex; gap: 40px; margin-bottom: 40px; opacity: 0; animation: fadeInUp 0.45s ease forwards 1.1s; }
 .stat-item { display: flex; flex-direction: column; }
 .stat-num { font-size: 2.5rem; font-weight: 900; color: var(--accent); line-height: 1; }
 .stat-plus { font-size: 1.5rem; color: var(--accent); font-weight: 700; }
 .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
 
-.hero-buttons { display: flex; gap: 16px; margin-bottom: 40px; opacity: 0; animation: fadeInUp 0.6s ease forwards 1.7s; }
-.hero-social { display: flex; gap: 12px; opacity: 0; animation: fadeInUp 0.6s ease forwards 1.9s; }
+.hero-buttons { display: flex; gap: 16px; margin-bottom: 40px; opacity: 0; animation: fadeInUp 0.45s ease forwards 1.25s; }
+.hero-social { display: flex; gap: 12px; opacity: 0; animation: fadeInUp 0.45s ease forwards 1.4s; }
 
 .social-link { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center; color: var(--text-light); text-decoration: none; transition: all var(--transition-normal); position: relative; overflow: hidden; }
 .social-link::before { content: ''; position: absolute; inset: 0; background: var(--gradient-1); opacity: 0; transition: opacity var(--transition-normal); border-radius: 50%; }
@@ -273,23 +272,24 @@ body.preload-active { overflow: hidden; }
 .hero-image { position: relative; width: 100%; height: 100%; border-radius: 20px; overflow: hidden; z-index: 2; background: var(--bg-card); border: 1px solid var(--border); }
 .hero-image-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: var(--gradient-2); opacity: 0.3; }
 .hero-image-inner i { font-size: 8rem; color: var(--text); opacity: 0.3; }
+.real-image { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-normal); }
 
-.hero-image-ring { position: absolute; border: 2px solid var(--accent); border-radius: 20px; opacity: 0.3; animation: ringPulse 3s ease infinite; }
+.hero-image-ring { position: absolute; border: 2px solid var(--accent); border-radius: 20px; opacity: 0.3; animation: ringPulse 2.25s ease infinite; }
 .ring-1 { inset: -15px; animation-delay: 0s; }
-.ring-2 { inset: -30px; opacity: 0.15; animation-delay: 0.5s; }
-.ring-3 { inset: -45px; opacity: 0.08; animation-delay: 1s; }
+.ring-2 { inset: -30px; opacity: 0.15; animation-delay: 0.35s; }
+.ring-3 { inset: -45px; opacity: 0.08; animation-delay: 0.75s; }
 @keyframes ringPulse { 0%, 100% { transform: scale(1); opacity: 0.3; } 50% { transform: scale(1.02); opacity: 0.15; } }
 
-.floating-badge { position: absolute; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 600; box-shadow: var(--shadow-md); z-index: 3; animation: badgeFloat 4s ease-in-out infinite; }
+.floating-badge { position: absolute; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 600; box-shadow: var(--shadow-md); z-index: 3; animation: badgeFloat 3s ease-in-out infinite; }
 .floating-badge i { color: var(--accent); font-size: 1rem; }
 .badge-1 { top: 30px; left: -30px; animation-delay: 0s; }
-.badge-2 { top: 50%; right: -40px; animation-delay: -1.3s; }
-.badge-3 { bottom: 60px; left: -20px; animation-delay: -2.6s; }
+.badge-2 { top: 50%; right: -40px; animation-delay: -1s; }
+.badge-3 { bottom: 60px; left: -20px; animation-delay: -2s; }
 @keyframes badgeFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-.scroll-indicator { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; animation: fadeInUp 0.6s ease forwards 2.1s; }
+.scroll-indicator { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; animation: fadeInUp 0.45s ease forwards 1.5s; }
 .scroll-mouse { width: 24px; height: 40px; border: 2px solid var(--text-muted); border-radius: 12px; display: flex; justify-content: center; padding-top: 8px; }
-.scroll-wheel { width: 4px; height: 8px; background: var(--accent); border-radius: 2px; animation: scrollWheel 1.5s ease infinite; }
+.scroll-wheel { width: 4px; height: 8px; background: var(--accent); border-radius: 2px; animation: scrollWheel 1.1s ease infinite; }
 @keyframes scrollWheel { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(12px); opacity: 0; } }
 .scroll-text { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; }
 
@@ -319,6 +319,31 @@ body.preload-active { overflow: hidden; }
 .highlight-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
 .highlight-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
 .about-cta { display: flex; gap: 24px; align-items: center; }
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 26px;
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-normal);
+}
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-5px);
+    color: white;
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
+}
 
 /* Services Section */
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; }
@@ -352,7 +377,7 @@ body.preload-active { overflow: hidden; }
 /* Experience Section */
 .experience-timeline { position: relative; max-width: 900px; margin: 0 auto; z-index: 1; }
 .timeline-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--border); transform: translateX(-50%); }
-.timeline-progress { position: absolute; top: 0; left: 0; width: 100%; background: var(--gradient-1); transition: height 0.3s ease; }
+.timeline-progress { position: absolute; top: 0; left: 0; width: 100%; background: var(--gradient-1); transition: height 0.22s ease; }
 
 .timeline-item { position: relative; margin-bottom: 60px; display: flex; justify-content: flex-end; padding-right: calc(50% + 40px); }
 .timeline-item:nth-child(even) { justify-content: flex-start; padding-right: 0; padding-left: calc(50% + 40px); }
@@ -392,13 +417,14 @@ body.preload-active { overflow: hidden; }
 .filter-btn:hover, .filter-btn.active { background: var(--accent); border-color: var(--accent); color: white; box-shadow: var(--shadow-accent); }
 
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; }
-.portfolio-item { transition: all 0.4s ease; }
+.portfolio-item { transition: all 0.3s ease; }
 .portfolio-item.hidden { display: none; }
-.portfolio-item.animate-in { animation: portfolioIn 0.5s ease forwards; }
+.portfolio-item.animate-in { animation: portfolioIn 0.35s ease forwards; }
 @keyframes portfolioIn { from { opacity: 0; transform: translateY(20px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
 .portfolio-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; transition: all var(--transition-normal); }
 .portfolio-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: var(--shadow-accent); }
+.portfolio-card:hover .real-image { transform: scale(1.1); }
 
 .portfolio-image { height: 220px; background: var(--bg-light); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
 .portfolio-image i { font-size: 3.5rem; color: var(--text); opacity: 0.15; transition: all var(--transition-normal); }
@@ -409,7 +435,7 @@ body.preload-active { overflow: hidden; }
 .portfolio-actions { display: flex; gap: 16px; }
 .portfolio-action { width: 50px; height: 50px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; color: var(--accent); text-decoration: none; transform: translateY(20px); opacity: 0; transition: all var(--transition-normal); }
 .portfolio-card:hover .portfolio-action { transform: translateY(0); opacity: 1; }
-.portfolio-card:hover .portfolio-action:nth-child(2) { transition-delay: 0.1s; }
+.portfolio-card:hover .portfolio-action:nth-child(2) { transition-delay: 0.08s; }
 .portfolio-action:hover { transform: scale(1.1) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
 
 .portfolio-info { padding: 28px; }
@@ -430,7 +456,7 @@ body.preload-active { overflow: hidden; }
 
 .skills-display { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 40px; min-height: 400px; }
 .skill-group { display: none; }
-.skill-group.active { display: block; animation: fadeIn 0.4s ease; }
+.skill-group.active { display: block; animation: fadeIn 0.3s ease; }
 @keyframes fadeIn { from { opacity: 0; transform: translateX(10px); } to { opacity: 1; transform: translateX(0); } }
 
 .skill-group-header { margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
@@ -442,7 +468,7 @@ body.preload-active { overflow: hidden; }
 .skill-bar-info span:first-child { font-size: 0.95rem; font-weight: 600; }
 .skill-percent { font-size: 0.85rem; color: var(--accent); font-weight: 700; }
 .skill-bar-track { height: 8px; background: var(--bg-light); border-radius: 4px; overflow: hidden; }
-.skill-bar-fill { height: 100%; background: var(--gradient-1); border-radius: 4px; width: 0; transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1); position: relative; }
+.skill-bar-fill { height: 100%; background: var(--gradient-1); border-radius: 4px; width: 0; transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1); position: relative; }
 .skill-bar-fill::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 20px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3)); border-radius: 4px; }
 
 .tools-section { margin-top: 80px; text-align: center; position: relative; z-index: 1; }
@@ -471,11 +497,11 @@ body.preload-active { overflow: hidden; }
 .cert-meta span { font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
 .cert-meta i { color: var(--accent); font-size: 0.8rem; }
 .cert-progress-bar { height: 4px; background: var(--bg-light); border-radius: 2px; overflow: hidden; }
-.cert-progress-fill { height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 2px; transition: width 1s ease; }
+.cert-progress-fill { height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 2px; transition: width 0.75s ease; }
 
 /* Testimonials */
 .testimonials-slider { position: relative; z-index: 1; overflow: hidden; }
-.testimonial-track { display: flex; gap: 24px; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+.testimonial-track { display: flex; gap: 24px; transition: transform 0.37s cubic-bezier(0.16, 1, 0.3, 1); }
 .testimonial-card { min-width: calc(50% - 12px); background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 40px; transition: all var(--transition-normal); }
 .testimonial-card:hover { border-color: var(--accent); }
 .testimonial-stars { display: flex; gap: 4px; margin-bottom: 20px; }
@@ -548,31 +574,31 @@ body.preload-active { overflow: hidden; }
 @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
 
-.animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.45s ease, transform 0.45s ease; }
 .animate-on-scroll.animated { opacity: 1; transform: translateY(0); }
 
 /* Reveal Animations */
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal.active { opacity: 1; transform: translateY(0); }
-.reveal-left { opacity: 0; transform: translateX(-40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal-left { opacity: 0; transform: translateX(-40px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal-left.active { opacity: 1; transform: translateX(0); }
-.reveal-right { opacity: 0; transform: translateX(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal-right { opacity: 0; transform: translateX(40px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal-right.active { opacity: 1; transform: translateX(0); }
-.reveal-scale { opacity: 0; transform: scale(0.9); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal-scale { opacity: 0; transform: scale(0.9); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal-scale.active { opacity: 1; transform: scale(1); }
 
 /* Stagger children */
 .stagger-children > * { opacity: 0; transform: translateY(20px); }
 .stagger-children.active > * { opacity: 1; transform: translateY(0); }
 .stagger-children.active > *:nth-child(1) { transition-delay: 0s; }
-.stagger-children.active > *:nth-child(2) { transition-delay: 0.1s; }
-.stagger-children.active > *:nth-child(3) { transition-delay: 0.2s; }
-.stagger-children.active > *:nth-child(4) { transition-delay: 0.3s; }
-.stagger-children.active > *:nth-child(5) { transition-delay: 0.4s; }
-.stagger-children.active > *:nth-child(6) { transition-delay: 0.5s; }
-.stagger-children.active > *:nth-child(7) { transition-delay: 0.6s; }
-.stagger-children.active > *:nth-child(8) { transition-delay: 0.7s; }
-.stagger-children.active > *:nth-child(9) { transition-delay: 0.8s; }
+.stagger-children.active > *:nth-child(2) { transition-delay: 0.08s; }
+.stagger-children.active > *:nth-child(3) { transition-delay: 0.15s; }
+.stagger-children.active > *:nth-child(4) { transition-delay: 0.22s; }
+.stagger-children.active > *:nth-child(5) { transition-delay: 0.3s; }
+.stagger-children.active > *:nth-child(6) { transition-delay: 0.37s; }
+.stagger-children.active > *:nth-child(7) { transition-delay: 0.45s; }
+.stagger-children.active > *:nth-child(8) { transition-delay: 0.52s; }
+.stagger-children.active > *:nth-child(9) { transition-delay: 0.6s; }
 
 /* ============================================
    RESPONSIVE DESIGN
@@ -633,6 +659,7 @@ body.preload-active { overflow: hidden; }
     .tool-item { padding: 10px 18px; font-size: 0.8rem; }
     .scroll-indicator { display: none; }
     .section-bg-text { font-size: 4rem; }
+    .whatsapp-float { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 22px; }
 }
 
 @media (max-width: 480px) {
@@ -675,7 +702,7 @@ body.preload-active { overflow: hidden; }
 
 /* Print Styles */
 @media print {
-    .navbar, .preloader, .cursor, .cursor-follower, .back-to-top, .scroll-indicator, .hero-bg, .section-bg-text, .cta-bg { display: none !important; }
+    .navbar, .preloader, .cursor, .cursor-follower, .back-to-top, .scroll-indicator, .hero-bg, .section-bg-text, .cta-bg, .whatsapp-float { display: none !important; }
     body { background: white; color: black; }
     .section { padding: 40px 0; }
     .hero { min-height: auto; padding: 40px 0; }
@@ -687,6 +714,7 @@ body.preload-active { overflow: hidden; }
 <body>
 
 
+    <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-content">
             <div class="preloader-text">
@@ -698,9 +726,11 @@ body.preload-active { overflow: hidden; }
         </div>
     </div>
 
+    <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursor-follower"></div>
 
+    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
@@ -729,6 +759,7 @@ body.preload-active { overflow: hidden; }
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <div class="mobile-menu-bg"></div>
         <div class="mobile-menu-content">
@@ -749,6 +780,7 @@ body.preload-active { overflow: hidden; }
         </div>
     </div>
 
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg">
             <div class="hero-bg-shape shape-1"></div>
@@ -770,7 +802,7 @@ body.preload-active { overflow: hidden; }
                     <span class="role-text" id="typewriter"></span>
                     <span class="role-cursor">|</span>
                 </div>
-                <p class="hero-desc">Co-Founder & Regional Director at <strong>Filmelo Media</strong>. I architect digital marketing strategies, lead creative production, and drive brand growth across <strong>Pakistan</strong> and the <strong>United States</strong>. Transforming South Asian hospitality brands into digital powerhouses.</p>
+                <p class="hero-desc">I am a <strong>Digital Marketing Specialist</strong>. I architect digital strategies, lead creative production, and drive rapid brand scaling for major entities like <strong>Khanbaba Restaurant</strong> and high-growth clients in the <strong>United States</strong>.</p>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
@@ -796,10 +828,10 @@ body.preload-active { overflow: hidden; }
                     </a>
                 </div>
                 <div class="hero-social">
-                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" class="social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com/yourusername" class="social-link" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="Behance" target="_blank"><i class="fab fa-behance"></i></a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -807,6 +839,8 @@ body.preload-active { overflow: hidden; }
                     <div class="hero-image">
                         <div class="hero-image-inner">
                             <i class="fas fa-user"></i>
+                            <!-- REPLACE ICON ABOVE WITH REAL IMAGE LIKE THIS: -->
+                            <!-- <img src="assets/profile-hero.jpg" alt="Muhammad Hassan Ehsan" class="real-image"> -->
                         </div>
                     </div>
                     <div class="hero-image-ring ring-1"></div>
@@ -835,48 +869,51 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
+    <!-- About Section -->
     <section class="about section" id="about">
         <div class="section-bg-text">ABOUT</div>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Get To Know Me</span>
                 <h2 class="section-title">About <span class="text-accent">Me</span></h2>
-                <p class="section-subtitle">Computer Science student turned digital marketing strategist and creative entrepreneur</p>
+                <p class="section-subtitle">A Digital Marketing Specialist with a proven track record of scaling top-tier brands.</p>
             </div>
             <div class="about-grid">
                 <div class="about-visual">
                     <div class="about-image-card">
                         <div class="about-image">
                             <i class="fas fa-user-tie"></i>
+                            <!-- REPLACE ICON ABOVE WITH REAL IMAGE LIKE THIS: -->
+                            <!-- <img src="assets/profile-about.jpg" alt="Muhammad Hassan Ehsan" class="real-image"> -->
                         </div>
                         <div class="about-image-frame"></div>
                     </div>
                     <div class="about-experience-badge">
                         <span class="exp-years">3+</span>
-                        <span class="exp-text">Years of<br>Experience</span>
+                        <span class="exp-text">Years of<br>Market Exp.</span>
                     </div>
                 </div>
                 <div class="about-content">
                     <div class="about-text">
-                        <p class="about-lead">I'm a <strong>BSCS student at Bahria University</strong> (CGPA 3.5/4.0, Expected 2029) with a passion for bridging technology and creative marketing. Currently serving as <strong>Co-Founder & Regional Director</strong> of Filmelo Media, a full-service creative agency I built from the ground up.</p>
-                        <p>My journey spans two continents — managing <strong>10+ brands</strong> across Pakistan and the United States, with a specialized focus on <strong>South Asian restaurant and hospitality brands</strong> in the New Jersey/Philadelphia region. I don't just run campaigns; I build brand ecosystems.</p>
-                        <p>From orchestrating end-to-end content production for <strong>Khanbaba Restaurant</strong> and <strong>Faletti's Hotel</strong> to scaling paid advertising for <strong>Burns Road Kitchen</strong> and <strong>Shalamar</strong> in the U.S., every project is a blend of strategic thinking, creative excellence, and data-driven optimization.</p>
+                        <p class="about-lead">I am a <strong>Digital Marketing Professional</strong> and creative entrepreneur with a deep-rooted passion for bridging data-driven technology and high-impact creative marketing. Currently serving as <strong>Co-Founder & Regional Director</strong> of Filmelo Media, a full-service agency I helped build.</p>
+                        <p>With over three years of market experience, my journey spans two continents — managing high-profile entities like <strong>Faletti's Hotel</strong> and <strong>Khanbaba Restaurant</strong> in Pakistan, alongside an extensive portfolio of rapidly growing brands in the <strong>United States</strong> such as <strong>Burns Road Kitchen</strong> and <strong>Shalamar</strong>.</p>
+                        <p>I specialize in orchestrating end-to-end content production and scaling paid advertising to the US market. Whether executing high-level SEO strategies or engineering AI-driven workflow automation, my focus is always on delivering unprecedented ROI and cementing brand authority.</p>
                     </div>
                     <div class="about-highlights">
                         <div class="highlight-card">
                             <div class="highlight-icon"><i class="fas fa-rocket"></i></div>
-                            <h4>Agency Leadership</h4>
-                            <p>Co-founded Filmelo Media, overseeing operations, business development, client acquisition, HR, and finances across two countries.</p>
+                            <h4>US Market Penetration</h4>
+                            <p>Proven track record of scaling brands across the United States, driving massive engagement and revenue growth.</p>
                         </div>
                         <div class="highlight-card">
                             <div class="highlight-icon"><i class="fas fa-trophy"></i></div>
                             <h4>National Debater</h4>
-                            <p>Represented Bahria University in the International HEC All-Pakistan Universities Debate — honed strategic thinking under pressure.</p>
+                            <p>Honed strategic thinking and high-pressure communication skills by competing at the national level.</p>
                         </div>
                         <div class="highlight-card">
                             <div class="highlight-icon"><i class="fas fa-certificate"></i></div>
-                            <h4>Google Certified</h4>
-                            <p>Holding 5+ professional certificates from Google in Project Management, Digital Marketing, AI Essentials, and Prompting.</p>
+                            <h4>Multi-Certified</h4>
+                            <p>Holding extensive professional certifications from Google, IBM, Microsoft, and AWS in marketing and cloud technologies.</p>
                         </div>
                         <div class="highlight-card">
                             <div class="highlight-icon"><i class="fas fa-chart-line"></i></div>
@@ -899,6 +936,7 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
+    <!-- Services Section -->
     <section class="services section" id="services">
         <div class="section-bg-text">SERVICES</div>
         <div class="container">
@@ -944,7 +982,7 @@ body.preload-active { overflow: hidden; }
                         <div class="service-icon"><i class="fas fa-rocket"></i></div>
                     </div>
                     <h3>Brand Growth & Positioning</h3>
-                    <p>Strategic brand positioning and growth hacking for South Asian hospitality brands. Community engagement, cross-platform publishing, and sustainable business scaling.</p>
+                    <p>Strategic brand positioning and growth hacking for premier hospitality brands. Community engagement, cross-platform publishing, and sustainable business scaling.</p>
                     <ul class="service-list">
                         <li><i class="fas fa-check"></i> Brand Strategy & Positioning</li>
                         <li><i class="fas fa-check"></i> Community Management</li>
@@ -1002,13 +1040,14 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
+    <!-- Experience Section -->
     <section class="experience section" id="experience">
         <div class="section-bg-text">EXPERIENCE</div>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">My Journey</span>
                 <h2 class="section-title">Professional <span class="text-accent">Experience</span></h2>
-                <p class="section-subtitle">From founding an agency to managing multi-national brand portfolios</p>
+                <p class="section-subtitle">From building an agency to managing multi-national brand portfolios</p>
             </div>
             <div class="experience-timeline">
                 <div class="timeline-line">
@@ -1036,18 +1075,18 @@ body.preload-active { overflow: hidden; }
                                 <span class="client-tag">Khanbaba Restaurant</span>
                                 <span class="client-tag">Faletti's Hotel</span>
                                 <span class="client-tag">Tandoori Tea & Co.</span>
-                                <span class="client-tag">Burns Road Kitchen</span>
-                                <span class="client-tag">Shalamar</span>
-                                <span class="client-tag">Kandahar</span>
-                                <span class="client-tag">Burns Road Foods</span>
-                                <span class="client-tag">Tabak NJ</span>
+                                <span class="client-tag">Burns Road Kitchen (USA)</span>
+                                <span class="client-tag">Shalamar (USA)</span>
+                                <span class="client-tag">Kandahar (USA)</span>
+                                <span class="client-tag">Burns Road Foods (USA)</span>
+                                <span class="client-tag">Tabak NJ (USA)</span>
                             </div>
                         </div>
                         <div class="timeline-tags">
                             <span class="tag">Agency Leadership</span>
                             <span class="tag">Operations</span>
                             <span class="tag">Client Relations</span>
-                            <span class="tag">Growth Strategy</span>
+                            <span class="tag">US Market Growth</span>
                         </div>
                     </div>
                 </div>
@@ -1065,7 +1104,7 @@ body.preload-active { overflow: hidden; }
                             </div>
                             <span class="timeline-date">Sept 2023 — Present</span>
                         </div>
-                        <h4 class="timeline-role">Digital Marketing Manager</h4>
+                        <h4 class="timeline-role">Digital Marketing Specialist</h4>
                         <p class="timeline-desc">Architect and execute comprehensive digital marketing strategies spanning Google Ads, Meta Ads, social media, SEO/SEM, and email marketing. Design and manage multi-channel advertising campaigns with continuous optimization.</p>
                         <div class="timeline-achievements">
                             <div class="achievement"><i class="fas fa-chart-line"></i> Campaign optimization for ROAS</div>
@@ -1113,13 +1152,14 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
+    <!-- Portfolio Section -->
     <section class="portfolio section" id="portfolio">
         <div class="section-bg-text">PORTFOLIO</div>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Selected Works</span>
                 <h2 class="section-title">My <span class="text-accent">Portfolio</span></h2>
-                <p class="section-subtitle">Campaigns, brands, and creative projects I've delivered across two continents</p>
+                <p class="section-subtitle">Campaigns, premier brands, and creative projects I've scaled globally</p>
             </div>
             <div class="portfolio-filter">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
@@ -1128,42 +1168,21 @@ body.preload-active { overflow: hidden; }
                 <button class="filter-btn" data-filter="creative">Creative</button>
             </div>
             <div class="portfolio-grid" id="portfolio-grid">
-                <div class="portfolio-item" data-category="pakistan creative">
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <i class="fas fa-utensils"></i>
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-actions">
-                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
-                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Pakistan • Food & Hospitality</span>
-                            <h3>Khanbaba Restaurant</h3>
-                            <p>End-to-end content creation covering regular dining, catering services, and brand events — content planning, brand positioning, production direction, shooting, editing, and final delivery.</p>
-                            <div class="portfolio-tags">
-                                <span>Content Strategy</span>
-                                <span>Brand Positioning</span>
-                                <span>Video Production</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="portfolio-item" data-category="pakistan creative">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <i class="fas fa-hotel"></i>
+                            <!-- REPLACE ICON ABOVE WITH REAL IMAGE LIKE THIS: -->
+                            <!-- <img src="assets/falettis.jpg" alt="Faletti's Hotel" class="real-image"> -->
                             <div class="portfolio-overlay">
                                 <div class="portfolio-actions">
-                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
-                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://instagram.com/falettishotel" class="portfolio-action" target="_blank" title="Visit Instagram"><i class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-info">
-                            <span class="portfolio-category">Pakistan • Luxury Hospitality</span>
+                            <span class="portfolio-category">Pakistan • Premier Hospitality</span>
                             <h3>Faletti's Hotel</h3>
                             <p>Full creative services for the main hotel and café concepts (Café de Brando & Café Beirut) — social content, catering coverage, brand positioning, and cross-platform publishing.</p>
                             <div class="portfolio-tags">
@@ -1174,14 +1193,66 @@ body.preload-active { overflow: hidden; }
                         </div>
                     </div>
                 </div>
+
+                <div class="portfolio-item" data-category="pakistan creative">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <i class="fas fa-utensils"></i>
+                            <!-- REPLACE ICON ABOVE WITH REAL IMAGE LIKE THIS: -->
+                            <!-- <img src="assets/khanbaba.jpg" alt="Khanbaba Restaurant" class="real-image"> -->
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="https://instagram.com/khanbaba.pk" class="portfolio-action" target="_blank" title="Visit Instagram"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Pakistan • Legacy Restaurant</span>
+                            <h3>Khanbaba Restaurant</h3>
+                            <p>End-to-end content creation covering regular dining, catering services, and brand events — content planning, brand positioning, production direction, shooting, editing, and final delivery.</p>
+                            <div class="portfolio-tags">
+                                <span>Content Strategy</span>
+                                <span>Brand Positioning</span>
+                                <span>Video Production</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="usa">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <i class="fas fa-globe-americas"></i>
+                            <!-- REPLACE ICON ABOVE WITH REAL IMAGE LIKE THIS: -->
+                            <!-- <img src="assets/burnsroad.jpg" alt="Burns Road Kitchen" class="real-image"> -->
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="https://instagram.com/burnsroadkitchen" class="portfolio-action" target="_blank" title="Visit Instagram"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">USA • High-Growth Client</span>
+                            <h3>Burns Road Kitchen</h3>
+                            <p>Full social media management and paid advertising for this NJ-based Pakistani restaurant — Meta Ads, Google Ads, content creation, and scaling community engagement.</p>
+                            <div class="portfolio-tags">
+                                <span>Meta Ads</span>
+                                <span>Google Ads</span>
+                                <span>Social Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="portfolio-item" data-category="pakistan creative">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <i class="fas fa-mug-hot"></i>
+                            <!-- REPLACE ICON ABOVE WITH REAL IMAGE LIKE THIS: -->
+                            <!-- <img src="assets/tandoori.jpg" alt="Tandoori Tea & Co" class="real-image"> -->
                             <div class="portfolio-overlay">
                                 <div class="portfolio-actions">
-                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
-                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://instagram.com/tandooritea" class="portfolio-action" target="_blank" title="Visit Instagram"><i class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1197,44 +1268,23 @@ body.preload-active { overflow: hidden; }
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="usa">
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <i class="fas fa-globe-americas"></i>
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-actions">
-                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
-                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">USA • South Asian Restaurant</span>
-                            <h3>Burns Road Kitchen</h3>
-                            <p>Full social media management and paid advertising for this NJ-based Pakistani restaurant — Meta Ads, Google Ads, content creation, and community engagement.</p>
-                            <div class="portfolio-tags">
-                                <span>Meta Ads</span>
-                                <span>Google Ads</span>
-                                <span>Social Management</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="portfolio-item" data-category="usa">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <i class="fas fa-pepper-hot"></i>
+                            <!-- REPLACE ICON ABOVE WITH REAL IMAGE LIKE THIS: -->
+                            <!-- <img src="assets/shalamar.jpg" alt="Shalamar" class="real-image"> -->
                             <div class="portfolio-overlay">
                                 <div class="portfolio-actions">
-                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
-                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://instagram.com/shalamar" class="portfolio-action" target="_blank" title="Visit Instagram"><i class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-info">
-                            <span class="portfolio-category">USA • Pakistani Cuisine</span>
+                            <span class="portfolio-category">USA • East Coast Client</span>
                             <h3>Shalamar</h3>
-                            <p>Brand content, social strategy, and ad campaigns — building a strong digital presence for this Philadelphia-area Pakistani restaurant brand.</p>
+                            <p>Brand content, social strategy, and aggressive ad campaigns — building a massive digital presence for this Philadelphia-area Pakistani restaurant brand.</p>
                             <div class="portfolio-tags">
                                 <span>Brand Content</span>
                                 <span>Ad Campaigns</span>
@@ -1247,17 +1297,18 @@ body.preload-active { overflow: hidden; }
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <i class="fas fa-fire"></i>
+                            <!-- REPLACE ICON ABOVE WITH REAL IMAGE LIKE THIS: -->
+                            <!-- <img src="assets/kandahar.jpg" alt="Kandahar" class="real-image"> -->
                             <div class="portfolio-overlay">
                                 <div class="portfolio-actions">
-                                    <a href="#" class="portfolio-action" title="View Project"><i class="fas fa-eye"></i></a>
-                                    <a href="#" class="portfolio-action" title="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://instagram.com/kandahar" class="portfolio-action" target="_blank" title="Visit Instagram"><i class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-info">
                             <span class="portfolio-category">USA • Afghan/Pakistani Cuisine</span>
                             <h3>Kandahar</h3>
-                            <p>Content creation, brand positioning, and community engagement — crafting a compelling brand narrative for this U.S. restaurant specializing in Afghan and Pakistani flavors.</p>
+                            <p>Content creation, brand positioning, and targeted community engagement — crafting a compelling narrative for this U.S. restaurant specializing in authentic flavors.</p>
                             <div class="portfolio-tags">
                                 <span>Content Creation</span>
                                 <span>Brand Positioning</span>
@@ -1270,6 +1321,7 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section class="skills section" id="skills">
         <div class="section-bg-text">SKILLS</div>
         <div class="container">
@@ -1574,129 +1626,124 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
+    <!-- Certifications Section -->
     <section class="certifications section" id="certifications">
         <div class="section-bg-text">CERTS</div>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Continuous Learning</span>
                 <h2 class="section-title">Certifications & <span class="text-accent">Development</span></h2>
-                <p class="section-subtitle">Always leveling up — from Google to IBM to AWS</p>
+                <p class="section-subtitle">Constantly expanding my tech stack and strategic capabilities</p>
             </div>
             <div class="certs-grid">
+                <!-- COMPLETED CERTS -->
                 <div class="cert-card completed">
                     <div class="cert-status"><i class="fas fa-check-circle"></i> Completed</div>
                     <div class="cert-icon"><i class="fab fa-google"></i></div>
                     <h3>Google Project Management Professional</h3>
                     <p>Professional certificate covering project lifecycle, Agile methodologies, and stakeholder management.</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-calendar"></i> 2024</span>
-                        <span><i class="fas fa-award"></i> Google</span>
-                    </div>
                 </div>
                 <div class="cert-card completed">
                     <div class="cert-status"><i class="fas fa-check-circle"></i> Completed</div>
                     <div class="cert-icon"><i class="fab fa-google"></i></div>
                     <h3>Google Digital Marketing & E-commerce</h3>
                     <p>Comprehensive training in digital marketing channels, e-commerce strategies, and campaign optimization.</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-calendar"></i> 2024</span>
-                        <span><i class="fas fa-award"></i> Google</span>
-                    </div>
+                </div>
+                <div class="cert-card completed">
+                    <div class="cert-status"><i class="fas fa-check-circle"></i> Completed</div>
+                    <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                    <h3>IBM AI Engineering</h3>
+                    <p>Advanced certification in building, deploying, and scaling AI-driven systems and machine learning models.</p>
                 </div>
                 <div class="cert-card completed">
                     <div class="cert-status"><i class="fas fa-check-circle"></i> Completed</div>
                     <div class="cert-icon"><i class="fab fa-google"></i></div>
-                    <h3>Google AI Essentials</h3>
-                    <p>Foundation in AI concepts, responsible AI practices, and practical AI applications in business.</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-calendar"></i> 2024</span>
-                        <span><i class="fas fa-award"></i> Google</span>
-                    </div>
+                    <h3>Google AI & Prompting Essentials</h3>
+                    <p>Foundation in AI concepts, responsible AI practices, and advanced prompt engineering.</p>
                 </div>
-                <div class="cert-card completed">
-                    <div class="cert-status"><i class="fas fa-check-circle"></i> Completed</div>
-                    <div class="cert-icon"><i class="fab fa-google"></i></div>
-                    <h3>Google Prompting Essentials</h3>
-                    <p>Advanced prompt engineering techniques for maximizing LLM output quality and efficiency.</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-calendar"></i> 2024</span>
-                        <span><i class="fas fa-award"></i> Google</span>
-                    </div>
-                </div>
-                <div class="cert-card in-progress">
-                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
-                    <div class="cert-icon"><i class="fas fa-code"></i></div>
-                    <h3>IBM Full Stack Software Engineer</h3>
-                    <p>Professional certificate covering front-end, back-end, cloud, and DevOps fundamentals.</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-calendar"></i> 2026</span>
-                        <span><i class="fas fa-award"></i> IBM</span>
-                    </div>
-                    <div class="cert-progress-bar">
-                        <div class="cert-progress-fill" style="width: 35%"></div>
-                    </div>
-                </div>
-                <div class="cert-card in-progress">
-                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
-                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>IBM & ISC² Cybersecurity Specialist</h3>
-                    <p>Specialized certification in cybersecurity principles, threat management, and risk assessment.</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-calendar"></i> 2026</span>
-                        <span><i class="fas fa-award"></i> IBM & ISC²</span>
-                    </div>
-                    <div class="cert-progress-bar">
-                        <div class="cert-progress-fill" style="width: 20%"></div>
-                    </div>
-                </div>
-                <div class="cert-card in-progress">
-                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
-                    <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
-                    <h3>Microsoft Azure Cloud Architect</h3>
-                    <p>Enterprise cloud architecture, Azure services, and infrastructure design certification.</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-calendar"></i> 2026</span>
-                        <span><i class="fas fa-award"></i> Microsoft</span>
-                    </div>
-                    <div class="cert-progress-bar">
-                        <div class="cert-progress-fill" style="width: 15%"></div>
-                    </div>
-                </div>
+
+                <!-- ONGOING CERTS -->
                 <div class="cert-card in-progress">
                     <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
                     <div class="cert-icon"><i class="fab fa-meta"></i></div>
-                    <h3>Meta Professional Advertising</h3>
-                    <p>Advanced Meta advertising certification for campaign strategy, optimization, and measurement.</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-calendar"></i> 2026</span>
-                        <span><i class="fas fa-award"></i> Meta</span>
-                    </div>
-                    <div class="cert-progress-bar">
-                        <div class="cert-progress-fill" style="width: 40%"></div>
-                    </div>
+                    <h3>Meta Social Media Marketing</h3>
+                    <p>Advanced Meta advertising strategies for elite brand scaling and targeted US market acquisition.</p>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" style="width: 75%"></div></div>
                 </div>
+                
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+                    <h3>Microsoft Azure Security Engineer (AZ-500)</h3>
+                    <p>Implementing security controls and threat protection in cloud networks and Azure architecture.</p>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" style="width: 60%"></div></div>
+                </div>
+
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Microsoft Cybersecurity Analyst</h3>
+                    <p>Specialized training in threat intelligence, vulnerability management, and proactive digital defense.</p>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" style="width: 45%"></div></div>
+                </div>
+
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Microsoft Cloud Support Associate</h3>
+                    <p>Mastering Microsoft 365, Azure Active Directory, and enterprise-level cloud troubleshooting.</p>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" style="width: 50%"></div></div>
+                </div>
+
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Microsoft AI and ML Engineer</h3>
+                    <p>Developing cognitive services, deep learning infrastructures, and intelligent enterprise solutions.</p>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" style="width: 35%"></div></div>
+                </div>
+
                 <div class="cert-card in-progress">
                     <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
                     <div class="cert-icon"><i class="fab fa-aws"></i></div>
-                    <h3>AWS Cloud Certification</h3>
-                    <p>Amazon Web Services cloud practitioner and solutions architect certification path.</p>
-                    <div class="cert-meta">
-                        <span><i class="fas fa-calendar"></i> 2026</span>
-                        <span><i class="fas fa-award"></i> Amazon</span>
-                    </div>
-                    <div class="cert-progress-bar">
-                        <div class="cert-progress-fill" style="width: 10%"></div>
-                    </div>
+                    <h3>AWS Cloud Solutions Architect</h3>
+                    <p>Designing highly available, cost-efficient, and scalable distributed systems on Amazon Web Services.</p>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" style="width: 40%"></div></div>
+                </div>
+
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>DeepLearning.AI Data Engineering</h3>
+                    <p>Advanced engineering of data pipelines, massive scale datasets, and machine learning infrastructure.</p>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" style="width: 25%"></div></div>
+                </div>
+
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>HRCI Human Resource Associate</h3>
+                    <p>Professional principles of human resource operations, talent acquisition, and organizational development.</p>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" style="width: 70%"></div></div>
+                </div>
+
+                <div class="cert-card in-progress">
+                    <div class="cert-status"><i class="fas fa-spinner fa-spin"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>IBM Scrum Master</h3>
+                    <p>Mastering agile frameworks, sprint execution, and driving high-performance development teams.</p>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" style="width: 55%"></div></div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section class="testimonials section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Client Feedback</span>
-                <h2 class="section-title">What Clients <span class="text-accent">Say</span></h2>
+                <h2 class="section-title">What Premier Clients <span class="text-accent">Say</span></h2>
             </div>
             <div class="testimonials-slider" id="testimonials-slider">
                 <div class="testimonial-track">
@@ -1704,9 +1751,9 @@ body.preload-active { overflow: hidden; }
                         <div class="testimonial-stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Hassan transformed our entire digital presence. From content strategy to paid ads, the ROI we've seen since working with Filmelo Media has been incredible. Truly a strategic partner."</p>
+                        <p class="testimonial-text">"Hassan completely transformed our legacy brand's digital presence. From creative direction to scaling paid ads, the ROI we've seen since partnering with Filmelo Media has been unprecedented."</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div class="author-avatar"><img src="assets/khanbaba-logo.jpg" alt="Khanbaba" style="width:100%; border-radius:50%; display:none;"> <!-- UNHIDE WHEN READY --> <i class="fas fa-utensils"></i></div>
                             <div class="author-info">
                                 <h4>Khanbaba Restaurant</h4>
                                 <span>Lahore, Pakistan</span>
@@ -1717,9 +1764,9 @@ body.preload-active { overflow: hidden; }
                         <div class="testimonial-stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Managing our social media and ads across two café concepts was no small task. Hassan delivered consistent, high-quality content that elevated our brand image significantly."</p>
+                        <p class="testimonial-text">"Managing luxury hospitality branding across multiple café concepts is incredibly complex. Hassan delivered a flawless strategy that elevated our brand prestige to new heights."</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div class="author-avatar"><i class="fas fa-hotel"></i></div>
                             <div class="author-info">
                                 <h4>Faletti's Hotel</h4>
                                 <span>Lahore, Pakistan</span>
@@ -1730,9 +1777,9 @@ body.preload-active { overflow: hidden; }
                         <div class="testimonial-stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"As a Pakistani restaurant in New Jersey, we needed someone who understood our culture AND digital marketing. Hassan nailed both. Our customer engagement has tripled."</p>
+                        <p class="testimonial-text">"Expanding a restaurant brand in the highly competitive US market is tough. Hassan's targeted ad strategies and creative direction tripled our customer engagement within months."</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div class="author-avatar"><i class="fas fa-map-pin"></i></div>
                             <div class="author-info">
                                 <h4>Burns Road Kitchen</h4>
                                 <span>New Jersey, USA</span>
@@ -1743,12 +1790,12 @@ body.preload-active { overflow: hidden; }
                         <div class="testimonial-stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"The brand identity and content strategy Hassan developed for Tandoori Tea helped us stand out in a crowded café market. Professional, creative, and always on time."</p>
+                        <p class="testimonial-text">"Hassan understands exactly how to position authentic South Asian cuisine for a modern Western audience. The content and ad campaigns have driven massive foot traffic to our location."</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div class="author-avatar"><i class="fas fa-pepper-hot"></i></div>
                             <div class="author-info">
-                                <h4>Tandoori Tea & Co.</h4>
-                                <span>Lahore, Pakistan</span>
+                                <h4>Shalamar</h4>
+                                <span>Philadelphia, USA</span>
                             </div>
                         </div>
                     </div>
@@ -1762,6 +1809,7 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="cta-bg">
             <div class="cta-shape cta-shape-1"></div>
@@ -1770,16 +1818,16 @@ body.preload-active { overflow: hidden; }
         </div>
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Have a Project in Mind?</h2>
-                <p class="cta-subtitle">Let's build something great together. Whether you're a restaurant brand in Pakistan or a startup in the U.S., I'm ready to bring your vision to life.</p>
+                <h2 class="cta-title">Ready to Scale Your Brand?</h2>
+                <p class="cta-subtitle">Let's build something extraordinary together. Whether you are an established enterprise in Pakistan or a high-growth brand in the US market, I am ready to elevate your digital presence.</p>
                 <div class="cta-buttons">
                     <a href="mailto:thehassanehsan@gmail.com" class="btn btn-primary btn-lg">
                         <span>Start a Conversation</span>
                         <i class="fas fa-paper-plane"></i>
                     </a>
-                    <a href="tel:+923214211029" class="btn btn-outline btn-lg">
-                        <span>Call Me Directly</span>
-                        <i class="fas fa-phone"></i>
+                    <a href="https://wa.me/923214211029" class="btn btn-outline btn-lg" target="_blank">
+                        <span>Message on WhatsApp</span>
+                        <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
                 <div class="cta-info">
@@ -1793,13 +1841,14 @@ body.preload-active { overflow: hidden; }
                     </div>
                     <div class="cta-info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Lahore, Punjab, Pakistan</span>
+                        <span>Lahore, Pakistan | US Markets</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-top">
             <div class="container">
@@ -1809,13 +1858,12 @@ body.preload-active { overflow: hidden; }
                             <span class="logo-text">MHE</span>
                             <span class="logo-dot"></span>
                         </a>
-                        <p class="footer-desc">Digital marketing expert and creative director building powerful brands across Pakistan and the United States. Specializing in South Asian hospitality and restaurant marketing.</p>
+                        <p class="footer-desc">Digital Marketing Specialist executing elite brand strategies and creative direction for high-profile clients across Pakistan and the United States.</p>
                         <div class="footer-social">
-                            <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="footer-social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="footer-social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
-                            <a href="#" class="footer-social-link" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                            <a href="https://linkedin.com/in/yourusername" class="footer-social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://instagram.com/yourusername" class="footer-social-link" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="footer-social-link" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="footer-social-link" aria-label="Behance" target="_blank"><i class="fab fa-behance"></i></a>
                         </div>
                     </div>
                     <div class="footer-links-col">
@@ -1831,9 +1879,9 @@ body.preload-active { overflow: hidden; }
                     <div class="footer-links-col">
                         <h4>Services</h4>
                         <ul>
-                            <li><a href="#services">Digital Marketing</a></li>
+                            <li><a href="#services">Digital Strategy</a></li>
                             <li><a href="#services">Creative Production</a></li>
-                            <li><a href="#services">Brand Growth</a></li>
+                            <li><a href="#services">US Market Growth</a></li>
                             <li><a href="#services">Project Management</a></li>
                             <li><a href="#services">AI Solutions</a></li>
                         </ul>
@@ -1842,8 +1890,8 @@ body.preload-active { overflow: hidden; }
                         <h4>Contact</h4>
                         <ul class="footer-contact-list">
                             <li><a href="mailto:thehassanehsan@gmail.com"><i class="fas fa-envelope"></i> thehassanehsan@gmail.com</a></li>
-                            <li><a href="tel:+923214211029"><i class="fas fa-phone"></i> +92 321 421 1029</a></li>
-                            <li><span><i class="fas fa-map-marker-alt"></i> Lahore, Punjab, Pakistan</span></li>
+                            <li><a href="https://wa.me/923214211029" target="_blank"><i class="fab fa-whatsapp"></i> +92 321 421 1029</a></li>
+                            <li><span><i class="fas fa-map-marker-alt"></i> Lahore, PK | US Markets</span></li>
                         </ul>
                     </div>
                 </div>
@@ -1859,6 +1907,12 @@ body.preload-active { overflow: hidden; }
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923214211029" class="whatsapp-float" target="_blank" title="Contact me on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -1867,15 +1921,12 @@ body.preload-active { overflow: hidden; }
     <script>
 /* ============================================
    MUHAMMAD HASSAN EHSAN - PORTFOLIO JS
-   Modern, Animated, Interactive Portfolio
    ============================================ */
 
 (function() {
     'use strict';
 
-    // ============================================
     // DOM ELEMENTS
-    // ============================================
     const preloader = document.getElementById('preloader');
     const navbar = document.getElementById('navbar');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -1898,23 +1949,17 @@ body.preload-active { overflow: hidden; }
     const testimonialDots = document.getElementById('testimonial-dots');
     const timelineProgress = document.getElementById('timeline-progress');
 
-    // ============================================
     // PRELOADER
-    // ============================================
     function hidePreloader() {
         if (preloader) {
             preloader.classList.add('hidden');
             document.body.classList.remove('preload-active');
         }
     }
-
-    // Hide preloader on load, or after max 2.5 seconds
     window.addEventListener('load', hidePreloader);
-    setTimeout(hidePreloader, 2500); // Fallback: always hide after 2.5s
+    setTimeout(hidePreloader, 2000); // SPED UP: Max wait is now 2s instead of 2.5s
 
-    // ============================================
     // CUSTOM CURSOR
-    // ============================================
     if (window.matchMedia('(pointer: fine)').matches) {
         let mouseX = 0, mouseY = 0;
         let cursorX = 0, cursorY = 0;
@@ -1926,10 +1971,10 @@ body.preload-active { overflow: hidden; }
         });
 
         function animateCursor() {
-            cursorX += (mouseX - cursorX) * 0.2;
-            cursorY += (mouseY - cursorY) * 0.2;
-            followerX += (mouseX - followerX) * 0.1;
-            followerY += (mouseY - followerY) * 0.1;
+            cursorX += (mouseX - cursorX) * 0.25; // SPED UP
+            cursorY += (mouseY - cursorY) * 0.25;
+            followerX += (mouseX - followerX) * 0.15; // SPED UP
+            followerY += (mouseY - followerY) * 0.15;
 
             cursor.style.transform = `translate(${cursorX - 4}px, ${cursorY - 4}px)`;
             cursorFollower.style.transform = `translate(${followerX - 20}px, ${followerY - 20}px)`;
@@ -1938,7 +1983,6 @@ body.preload-active { overflow: hidden; }
         }
         animateCursor();
 
-        // Cursor hover effects
         const interactiveElements = document.querySelectorAll('a, button, .service-card, .portfolio-card, .highlight-card, .cert-card, .testimonial-card');
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
@@ -1954,64 +1998,42 @@ body.preload-active { overflow: hidden; }
         });
     }
 
-    // ============================================
     // NAVBAR SCROLL EFFECT
-    // ============================================
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
+        if (currentScroll > 50) { navbar.classList.add('scrolled'); } 
+        else { navbar.classList.remove('scrolled'); }
 
-        if (currentScroll > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-
-        // Back to top button
-        if (currentScroll > 500) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
-
+        if (currentScroll > 500) { backToTop.classList.add('visible'); } 
+        else { backToTop.classList.remove('visible'); }
         lastScroll = currentScroll;
     });
 
-    // ============================================
     // ACTIVE NAV LINK ON SCROLL
-    // ============================================
     const sections = document.querySelectorAll('section[id]');
-
     function updateActiveNav() {
         const scrollPos = window.scrollY + 100;
-
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
-
             if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + sectionId) {
-                        link.classList.add('active');
-                    }
+                    if (link.getAttribute('href') === '#' + sectionId) { link.classList.add('active'); }
                 });
             }
         });
     }
-
     window.addEventListener('scroll', updateActiveNav);
 
-    // ============================================
     // MOBILE MENU
-    // ============================================
     mobileToggle.addEventListener('click', () => {
         mobileToggle.classList.toggle('active');
         mobileMenu.classList.toggle('active');
         document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
     });
-
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', () => {
             mobileToggle.classList.remove('active');
@@ -2019,20 +2041,16 @@ body.preload-active { overflow: hidden; }
             document.body.style.overflow = '';
         });
     });
-
     mobileMenu.querySelector('.mobile-menu-bg').addEventListener('click', () => {
         mobileToggle.classList.remove('active');
         mobileMenu.classList.remove('active');
         document.body.style.overflow = '';
     });
 
-    // ============================================
     // THEME TOGGLE
-    // ============================================
     const currentTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', currentTheme);
     updateThemeIcon(currentTheme);
-
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -2040,67 +2058,54 @@ body.preload-active { overflow: hidden; }
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
     });
-
     function updateThemeIcon(theme) {
         const icon = themeToggle.querySelector('i');
         icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
     }
 
-    // ============================================
     // TYPEWRITER EFFECT
-    // ============================================
     const roles = [
-        'Digital Marketing Expert',
+        'Digital Marketing Specialist',
         'Creative Director',
         'Agency Co-Founder',
-        'Brand Strategist',
-        'Project Manager'
+        'Brand Scaling Expert'
     ];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let typeSpeed = 100;
+    let typeSpeed = 75; // SPED UP 25%
 
     function typeWriter() {
         const currentRole = roles[roleIndex];
-
         if (isDeleting) {
             typewriterEl.textContent = currentRole.substring(0, charIndex - 1);
             charIndex--;
-            typeSpeed = 50;
+            typeSpeed = 35; // SPED UP
         } else {
             typewriterEl.textContent = currentRole.substring(0, charIndex + 1);
             charIndex++;
-            typeSpeed = 100;
+            typeSpeed = 75; // SPED UP
         }
-
         if (!isDeleting && charIndex === currentRole.length) {
             isDeleting = true;
-            typeSpeed = 2000;
+            typeSpeed = 1500; // SPED UP
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             roleIndex = (roleIndex + 1) % roles.length;
-            typeSpeed = 500;
+            typeSpeed = 375; // SPED UP
         }
-
         setTimeout(typeWriter, typeSpeed);
     }
+    if (typewriterEl) { setTimeout(typeWriter, 1500); }
 
-    if (typewriterEl) {
-        setTimeout(typeWriter, 2000);
-    }
-
-    // ============================================
     // COUNTER ANIMATION
-    // ============================================
     function animateCounters() {
         const counters = document.querySelectorAll('.stat-num[data-count]');
         counters.forEach(counter => {
             const target = parseInt(counter.getAttribute('data-count'));
-            const duration = 2000;
+            const duration = 1500; // SPED UP
             const step = target / (duration / 16);
             let current = 0;
-
             const updateCounter = () => {
                 current += step;
                 if (current < target) {
@@ -2113,8 +2118,6 @@ body.preload-active { overflow: hidden; }
             updateCounter();
         });
     }
-
-    // Trigger counter animation when hero is visible
     const heroObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -2123,15 +2126,11 @@ body.preload-active { overflow: hidden; }
             }
         });
     }, { threshold: 0.5 });
-
     const heroSection = document.querySelector('.hero');
     if (heroSection) heroObserver.observe(heroSection);
 
-    // ============================================
     // SCROLL REVEAL ANIMATIONS
-    // ============================================
     const revealElements = document.querySelectorAll('.section-header, .service-card, .highlight-card, .timeline-item, .portfolio-item, .cert-card, .tool-item');
-
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -2141,51 +2140,36 @@ body.preload-active { overflow: hidden; }
             }
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
     revealElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
+        el.style.transition = `opacity 0.45s ease ${index * 0.04}s, transform 0.45s ease ${index * 0.04}s`; // SPED UP
         revealObserver.observe(el);
     });
 
-    // ============================================
     // SKILLS TABS
-    // ============================================
     skillCatBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const cat = btn.getAttribute('data-cat');
-
             skillCatBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
             skillGroups.forEach(group => {
                 group.classList.remove('active');
-                if (group.getAttribute('data-cat') === cat) {
-                    group.classList.add('active');
-                }
+                if (group.getAttribute('data-cat') === cat) { group.classList.add('active'); }
             });
-
-            // Animate skill bars for the active group
-            setTimeout(animateSkillBars, 100);
+            setTimeout(animateSkillBars, 75); // SPED UP
         });
     });
-
     function animateSkillBars() {
         const activeGroup = document.querySelector('.skill-group.active');
         if (!activeGroup) return;
-
         const bars = activeGroup.querySelectorAll('.skill-bar-fill');
         bars.forEach(bar => {
             const width = bar.getAttribute('data-width');
             bar.style.width = '0';
-            setTimeout(() => {
-                bar.style.width = width + '%';
-            }, 100);
+            setTimeout(() => { bar.style.width = width + '%'; }, 75);
         });
     }
-
-    // Observe skills section for initial animation
     const skillsSection = document.getElementById('skills');
     if (skillsSection) {
         const skillsObserver = new IntersectionObserver((entries) => {
@@ -2199,23 +2183,18 @@ body.preload-active { overflow: hidden; }
         skillsObserver.observe(skillsSection);
     }
 
-    // ============================================
     // PORTFOLIO FILTER
-    // ============================================
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const filter = btn.getAttribute('data-filter');
-
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
             portfolioItems.forEach(item => {
                 const categories = item.getAttribute('data-category');
-
                 if (filter === 'all' || categories.includes(filter)) {
                     item.classList.remove('hidden');
                     item.classList.add('animate-in');
-                    setTimeout(() => item.classList.remove('animate-in'), 500);
+                    setTimeout(() => item.classList.remove('animate-in'), 375); // SPED UP
                 } else {
                     item.classList.add('hidden');
                 }
@@ -2223,9 +2202,7 @@ body.preload-active { overflow: hidden; }
         });
     });
 
-    // ============================================
     // TESTIMONIALS SLIDER
-    // ============================================
     let currentSlide = 0;
     const testimonialCards = document.querySelectorAll('.testimonial-card');
     const totalSlides = testimonialCards.length;
@@ -2242,46 +2219,33 @@ body.preload-active { overflow: hidden; }
             testimonialDots.appendChild(dot);
         }
     }
-
     function updateSlider() {
         const cardWidth = testimonialCards[0].offsetWidth + 24;
         testimonialTrack.style.transform = `translateX(-${currentSlide * cardWidth * slidesPerView}px)`;
-
         document.querySelectorAll('.testimonial-dot').forEach((dot, index) => {
             dot.classList.toggle('active', index === currentSlide);
         });
     }
-
     function goToSlide(index) {
         const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
         currentSlide = Math.max(0, Math.min(index, maxSlide));
         updateSlider();
     }
-
     function nextSlide() {
         const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
         currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
         updateSlider();
     }
-
     function prevSlide() {
         const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
         currentSlide = currentSlide <= 0 ? maxSlide : currentSlide - 1;
         updateSlider();
     }
-
     testimonialNext.addEventListener('click', nextSlide);
     testimonialPrev.addEventListener('click', prevSlide);
-
-    // Auto-slide
-    let autoSlideInterval = setInterval(nextSlide, 5000);
-
+    let autoSlideInterval = setInterval(nextSlide, 3750); // SPED UP
     testimonialTrack.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-    testimonialTrack.addEventListener('mouseleave', () => {
-        autoSlideInterval = setInterval(nextSlide, 5000);
-    });
-
-    // Handle resize
+    testimonialTrack.addEventListener('mouseleave', () => { autoSlideInterval = setInterval(nextSlide, 3750); });
     window.addEventListener('resize', () => {
         const newSlidesPerView = window.innerWidth > 768 ? 2 : 1;
         if (newSlidesPerView !== slidesPerView) {
@@ -2291,12 +2255,9 @@ body.preload-active { overflow: hidden; }
             updateSlider();
         }
     });
-
     createDots();
 
-    // ============================================
     // TIMELINE PROGRESS
-    // ============================================
     if (timelineProgress) {
         const timelineSection = document.getElementById('experience');
         const timelineObserver = new IntersectionObserver((entries) => {
@@ -2319,16 +2280,8 @@ body.preload-active { overflow: hidden; }
         timelineObserver.observe(timelineSection);
     }
 
-    // ============================================
     // BACK TO TOP
-    // ============================================
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // ============================================
-    // SMOOTH SCROLL FOR ANCHOR LINKS
-    // ============================================
+    backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -2341,11 +2294,8 @@ body.preload-active { overflow: hidden; }
         });
     });
 
-    // ============================================
-    // 3D TILT EFFECT FOR CARDS
-    // ============================================
+    // 3D TILT EFFECT
     const tiltCards = document.querySelectorAll('[data-tilt]');
-
     tiltCards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
@@ -2355,20 +2305,15 @@ body.preload-active { overflow: hidden; }
             const centerY = rect.height / 2;
             const rotateX = (y - centerY) / 20;
             const rotateY = (centerX - x) / 20;
-
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
         });
-
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
         });
     });
 
-    // ============================================
     // PARALLAX EFFECT
-    // ============================================
     const parallaxElements = document.querySelectorAll('.hero-bg-shape, .section-bg-text');
-
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         parallaxElements.forEach((el, index) => {
@@ -2377,11 +2322,8 @@ body.preload-active { overflow: hidden; }
         });
     });
 
-    // ============================================
-    // MAGNETIC BUTTON EFFECT
-    // ============================================
+    // MAGNETIC BUTTONS
     const magneticBtns = document.querySelectorAll('.btn-primary, .btn-outline');
-
     magneticBtns.forEach(btn => {
         btn.addEventListener('mousemove', (e) => {
             const rect = btn.getBoundingClientRect();
@@ -2389,18 +2331,14 @@ body.preload-active { overflow: hidden; }
             const y = e.clientY - rect.top - rect.height / 2;
             btn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
         });
-
         btn.addEventListener('mouseleave', () => {
             btn.style.transform = 'translate(0, 0)';
         });
     });
 
-    // ============================================
-    // CERTIFICATION PROGRESS ANIMATION
-    // ============================================
+    // CERT PROGRESS ANIMATION
     const certProgressBars = document.querySelectorAll('.cert-progress-fill');
     const certsSection = document.getElementById('certifications');
-
     if (certsSection) {
         const certsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -2408,9 +2346,7 @@ body.preload-active { overflow: hidden; }
                     certProgressBars.forEach(bar => {
                         const width = bar.style.width;
                         bar.style.width = '0';
-                        setTimeout(() => {
-                            bar.style.width = width;
-                        }, 200);
+                        setTimeout(() => { bar.style.width = width; }, 150); // SPED UP
                     });
                     certsObserver.disconnect();
                 }
@@ -2419,16 +2355,13 @@ body.preload-active { overflow: hidden; }
         certsObserver.observe(certsSection);
     }
 
-    // ============================================
-    // TEXT SCRAMBLE EFFECT FOR SECTION HEADERS
-    // ============================================
+    // TEXT SCRAMBLE
     class TextScramble {
         constructor(el) {
             this.el = el;
             this.chars = '!<>-_\/[]{}—=+*^?#________';
             this.update = this.update.bind(this);
         }
-
         setText(newText) {
             const oldText = this.el.innerText;
             const length = Math.max(oldText.length, newText.length);
@@ -2446,7 +2379,6 @@ body.preload-active { overflow: hidden; }
             this.update();
             return promise;
         }
-
         update() {
             let output = '';
             let complete = 0;
@@ -2473,25 +2405,15 @@ body.preload-active { overflow: hidden; }
                 this.frame++;
             }
         }
-
-        randomChar() {
-            return this.chars[Math.floor(Math.random() * this.chars.length)];
-        }
+        randomChar() { return this.chars[Math.floor(Math.random() * this.chars.length)]; }
     }
-
-    // Apply scramble effect to section titles on hover
     document.querySelectorAll('.section-title').forEach(title => {
         const originalText = title.innerText;
         const fx = new TextScramble(title);
-
-        title.parentElement.addEventListener('mouseenter', () => {
-            fx.setText(originalText);
-        });
+        title.parentElement.addEventListener('mouseenter', () => { fx.setText(originalText); });
     });
 
-    // ============================================
-    // PARTICLE EFFECT ON HERO (Canvas)
-    // ============================================
+    // PARTICLE EFFECT
     const canvas = document.createElement('canvas');
     canvas.style.position = 'absolute';
     canvas.style.top = '0';
@@ -2500,11 +2422,9 @@ body.preload-active { overflow: hidden; }
     canvas.style.height = '100%';
     canvas.style.pointerEvents = 'none';
     canvas.style.zIndex = '0';
-
     const heroBg = document.querySelector('.hero-bg');
     if (heroBg) {
         heroBg.appendChild(canvas);
-
         const ctx = canvas.getContext('2d');
         let particles = [];
         const particleCount = 50;
@@ -2513,42 +2433,34 @@ body.preload-active { overflow: hidden; }
             canvas.width = heroBg.offsetWidth;
             canvas.height = heroBg.offsetHeight;
         }
-
         function createParticles() {
             particles = [];
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5,
+                    vx: (Math.random() - 0.5) * 0.65, // SPED UP 25%
+                    vy: (Math.random() - 0.5) * 0.65,
                     radius: Math.random() * 2 + 1,
                     opacity: Math.random() * 0.5 + 0.2
                 });
             }
         }
-
         function drawParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-
             particles.forEach((p, i) => {
                 p.x += p.vx;
                 p.y += p.vy;
-
                 if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(233, 69, 96, ${p.opacity})`;
                 ctx.fill();
-
-                // Draw connections
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[j].x - p.x;
                     const dy = particles[j].y - p.y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
-
                     if (distance < 150) {
                         ctx.beginPath();
                         ctx.moveTo(p.x, p.y);
@@ -2559,23 +2471,15 @@ body.preload-active { overflow: hidden; }
                     }
                 }
             });
-
             requestAnimationFrame(drawParticles);
         }
-
         resizeCanvas();
         createParticles();
         drawParticles();
-
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            createParticles();
-        });
+        window.addEventListener('resize', () => { resizeCanvas(); createParticles(); });
     }
 
-    // ============================================
-    // GLITCH EFFECT ON LOGO
-    // ============================================
+    // GLITCH LOGO
     const logo = document.querySelector('.logo');
     if (logo) {
         logo.addEventListener('mouseenter', () => {
@@ -2583,7 +2487,6 @@ body.preload-active { overflow: hidden; }
             const original = text.textContent;
             const glitchChars = '!<>-_\/[]{}—=+*^?#';
             let iterations = 0;
-
             const interval = setInterval(() => {
                 text.textContent = original
                     .split('')
@@ -2592,19 +2495,16 @@ body.preload-active { overflow: hidden; }
                         return glitchChars[Math.floor(Math.random() * glitchChars.length)];
                     })
                     .join('');
-
                 if (iterations >= original.length) {
                     clearInterval(interval);
                     text.textContent = original;
                 }
                 iterations += 1/3;
-            }, 30);
+            }, 22); // SPED UP
         });
     }
 
-    // ============================================
-    // KEYBOARD NAVIGATION
-    // ============================================
+    // ESC KEY NAV
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
             mobileToggle.classList.remove('active');
@@ -2613,11 +2513,8 @@ body.preload-active { overflow: hidden; }
         }
     });
 
-    // ============================================
-    // CONSOLE EASTER EGG
-    // ============================================
     console.log("%c Muhammad Hassan Ehsan ", "background: linear-gradient(135deg, #e94560, #ff6b81); color: white; font-size: 24px; font-weight: bold; padding: 10px 20px; border-radius: 10px;");
-    console.log("%c Digital Marketing Expert & Creative Director ", "color: #e94560; font-size: 14px; font-weight: 600;");
+    console.log("%c Digital Marketing Specialist ", "color: #e94560; font-size: 14px; font-weight: 600;");
     console.log("%c Looking under the hood? Let's connect! ", "color: #a0a0b0; font-size: 12px;");
     console.log("%c thehassanehsan@gmail.com ", "color: #e94560; font-size: 12px; font-weight: 600;");
 
