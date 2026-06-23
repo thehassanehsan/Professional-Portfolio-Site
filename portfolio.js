@@ -36,14 +36,13 @@
     // ============================================
     window.addEventListener('load', () => {
         document.body.classList.add('preload-active');
-        setTimeout(() => {
-            preloader.classList.add('hidden');
-            document.body.classList.remove('preload-active');
-            // Trigger initial animations
-            animateSkillBars();
-        }, 1800);
-    });
-
+    setTimeout(() => {
+        preloader.classList.add('hidden');
+    }, 1500);
+});
+setTimeout(() => {
+    preloader.classList.add('hidden');
+}, 3000);  // Fallback: always hide after 3 seconds
     // ============================================
     // CUSTOM CURSOR
     // ============================================
