@@ -682,11 +682,11 @@ body.preload-active { overflow: hidden; }
     .btn { border: 1px solid black; color: black; background: transparent; }
 }
 
-</style>
+    </style>
 </head>
 <body>
 
-    <!-- Preloader -->
+
     <div class="preloader" id="preloader">
         <div class="preloader-content">
             <div class="preloader-text">
@@ -698,11 +698,9 @@ body.preload-active { overflow: hidden; }
         </div>
     </div>
 
-    <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursor-follower"></div>
 
-    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
@@ -731,7 +729,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <div class="mobile-menu-bg"></div>
         <div class="mobile-menu-content">
@@ -752,7 +749,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </div>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg">
             <div class="hero-bg-shape shape-1"></div>
@@ -839,7 +835,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about section" id="about">
         <div class="section-bg-text">ABOUT</div>
         <div class="container">
@@ -904,7 +899,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services section" id="services">
         <div class="section-bg-text">SERVICES</div>
         <div class="container">
@@ -1008,7 +1002,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section class="experience section" id="experience">
         <div class="section-bg-text">EXPERIENCE</div>
         <div class="container">
@@ -1120,7 +1113,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section class="portfolio section" id="portfolio">
         <div class="section-bg-text">PORTFOLIO</div>
         <div class="container">
@@ -1278,7 +1270,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section class="skills section" id="skills">
         <div class="section-bg-text">SKILLS</div>
         <div class="container">
@@ -1583,7 +1574,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
-    <!-- Certifications Section -->
     <section class="certifications section" id="certifications">
         <div class="section-bg-text">CERTS</div>
         <div class="container">
@@ -1702,7 +1692,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section class="testimonials section">
         <div class="container">
             <div class="section-header">
@@ -1773,7 +1762,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="cta-bg">
             <div class="cta-shape cta-shape-1"></div>
@@ -1812,7 +1800,6 @@ body.preload-active { overflow: hidden; }
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-top">
             <div class="container">
@@ -1872,11 +1859,11 @@ body.preload-active { overflow: hidden; }
         </div>
     </footer>
 
-    <!-- Back to Top -->
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    
     <script>
 /* ============================================
    MUHAMMAD HASSAN EHSAN - PORTFOLIO JS
@@ -1914,15 +1901,16 @@ body.preload-active { overflow: hidden; }
     // ============================================
     // PRELOADER
     // ============================================
-    window.addEventListener('load', () => {
-        document.body.classList.add('preload-active');
-        setTimeout(() => {
+    function hidePreloader() {
+        if (preloader) {
             preloader.classList.add('hidden');
             document.body.classList.remove('preload-active');
-            // Trigger initial animations
-            animateSkillBars();
-        }, 1800);
-    });
+        }
+    }
+
+    // Hide preloader on load, or after max 2.5 seconds
+    window.addEventListener('load', hidePreloader);
+    setTimeout(hidePreloader, 2500); // Fallback: always hide after 2.5s
 
     // ============================================
     // CUSTOM CURSOR
@@ -2099,7 +2087,7 @@ body.preload-active { overflow: hidden; }
     }
 
     if (typewriterEl) {
-        setTimeout(typeWriter, 1500);
+        setTimeout(typeWriter, 2000);
     }
 
     // ============================================
@@ -2628,13 +2616,12 @@ body.preload-active { overflow: hidden; }
     // ============================================
     // CONSOLE EASTER EGG
     // ============================================
-    console.log('%c Muhammad Hassan Ehsan ', 'background: linear-gradient(135deg, #e94560, #ff6b81); color: white; font-size: 24px; font-weight: bold; padding: 10px 20px; border-radius: 10px;');
-    console.log('%c Digital Marketing Expert & Creative Director ', 'color: #e94560; font-size: 14px; font-weight: 600;');
-    console.log('%c Looking under the hood? Let's connect! ', 'color: #a0a0b0; font-size: 12px;');
-    console.log('%c thehassanehsan@gmail.com ', 'color: #e94560; font-size: 12px; font-weight: 600;');
+    console.log("%c Muhammad Hassan Ehsan ", "background: linear-gradient(135deg, #e94560, #ff6b81); color: white; font-size: 24px; font-weight: bold; padding: 10px 20px; border-radius: 10px;");
+    console.log("%c Digital Marketing Expert & Creative Director ", "color: #e94560; font-size: 14px; font-weight: 600;");
+    console.log("%c Looking under the hood? Let's connect! ", "color: #a0a0b0; font-size: 12px;");
+    console.log("%c thehassanehsan@gmail.com ", "color: #e94560; font-size: 12px; font-weight: 600;");
 
 })();
-
-</script>
+    </script>
 </body>
 </html>
